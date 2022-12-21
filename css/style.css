@@ -1,0 +1,524 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Work+Sans&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #3d4152;
+}
+
+/* menu lateral */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 1.5rem;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  background: #3d4152;
+}
+
+/* Boton cerrar(X) del menu lateral */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* hover del elemento cerrar(X) del menu */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* estilo elemento cerrar(X) del menu */
+.sidenav .cerrar-menu {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+/* contenido de la pagina 1*/
+#main {
+  transition: margin-left 0.5s;
+  padding: 0rem 0rem 0rem 6rem;
+  margin-right: 1rem;
+}
+
+/* icono hamburguesa menu */
+#abrir-menu {
+  font-size: 30px;
+  cursor: pointer;
+  top: 1rem;
+  left: 2rem;
+  color: #fff;
+  position: fixed;
+}
+
+/* hover de icono del menu hamburguesa */
+#abrir-menu:hover {
+  color: #818181;
+  transition: 0.5s;
+}
+
+/* cursor del boton cerrar del menu */
+.cerrar-menu {
+  cursor: pointer;
+}
+
+/* .menu lateral */
+.menu {
+  inset: 20px 0 20px 20px;
+  height: 90%;
+  background: #fff;
+  /* transition: 0.5s; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* estilos del menu */
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* estilos del menu */
+.menu ul li {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  /* mover el menu un poco mas arriba */
+  bottom: 2rem;
+  right: 1rem;
+}
+
+/* iconos del menu */
+.menu ul li .icon {
+  position: relative;
+  min-width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.75em;
+  transition: 0.5s;
+}
+
+/* cambio de color del icono del menu al estar activo */
+.menu ul li.active .icon {
+  color: #fff;
+  background: var(--color);
+}
+
+/* .menu ul li.active .icon::before {
+  opacity: 0.5;
+} */
+
+/* estilos del texto del menu */
+.menu ul li .text {
+  position: relative;
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  /* opacity: 1; */
+  /* visibility: hidden; */
+  /* transition: 0.5s; */
+}
+
+/* visibilidad del menu cuando esta abierto */
+.menu ul li .text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* cambia el color de la opcion del menu segun que link este activo */
+.menu ul li.active .text {
+  color: var(--color);
+}
+
+/* movimiento de la opcion del menu al estar activo */
+.menu ul li.active {
+  transform: translateX(30px);
+}
+
+/* ****************************** INICIO CONTENIDO PAGINA ************************************* */
+/* contenido de la pagina 2 */
+/* .inicio{
+  color: #fff;
+  background: brown;
+  animation: 3s anim-lineUp ease-out;
+  espaciado en la pagina
+  padding: 8rem 0rem 10rem 0rem;
+  height: 100vh;
+} */
+
+
+/* .inicio h2 {
+  color: white;
+  text-shadow: 20px 20px 10px #000000;
+  font-size: 4vw;
+  margin-left: 2rem;
+  background: turquoise;
+  espaciado(vertical/altura) de la letra la letra
+  line-height: 50%;
+  height: 4rem;
+} */
+
+/* =============================== SECCION 1 ========================================= */
+.presentacion{
+  background: bisque;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: 3s anim-lineUp ease-out;
+}
+
+.inicio{
+  background: brown;
+  color: #fff;
+  font-size: 3.5vw;
+}
+
+/* texto presentacion del inicio */
+.inicio h2{
+  background: turquoise;
+  line-height: 50%;
+}
+
+/* =============================== FIN SECCION 1 ===================================== */
+
+/* =============================== SECCION 2 ========================================= */
+.habilidades{
+  background: violet;
+  height: 100vh auto;
+  position: relative;
+}
+
+.habilidades h3{
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.intro{
+  background: springgreen;
+  margin: 0rem 2rem 0rem 2rem;
+}
+
+.intro p{
+  padding: 1rem 0rem 1rem 0rem;
+  color: #fff;
+}
+
+.cont-caja{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 2rem;
+}
+
+.caja{
+  background: teal;
+  width: 600px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hab-contenedor .fondo{
+  font-size: 10vw;
+  position: absolute;
+  bottom: 0;
+  opacity: .1;
+}
+
+/* =============================== FIN SECCION 2====================================== */
+
+/* =============================== SECCION 3 ========================================= */
+.experiencia{
+  background: yellow;
+  /* margin-top: 10rem; */
+  position: relative;
+  /* de manera inicial cuando tenga poca informacion el contenedor usar 100 vh, ya que este le da
+   el alto completo que tenga la pantalla en donde se este visualizando(monitor), cuando el contenido en 
+   el contenedor aumente simplemente agregar al height: 100vh auto; ya que esto agregara el resto del contenido
+   sin problemas dentro de los margenes del contenedor, o en su defecto quitar simplemente el height*/
+  height: 100vh;
+}
+
+.experiencia h3{
+  background: tomato;
+  text-align: center;
+  font-size: 3rem;
+  /* margin: 4rem 0rem 4rem 0rem; */
+  color: #fff;
+}
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+}
+
+.caja_dos{
+  background: yellowgreen;
+  width: 90%;
+  height: 400px;
+  /* margin: 7rem 0rem 7rem 0rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp-contenedor{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exp-contenedor .fondo{
+  font-size: 10vw;
+  background: turquoise;
+  opacity: .1;
+  position: absolute;
+  /* establecemos con el bottom el 0 (cero) para que su posicion este dentro del margen
+   del contenedor experiencia */
+  bottom: 0;
+}
+/* =============================== FIN SECCION 3 ========================================= */
+
+/* =============================== SECCION 4 ========================================= */
+.proyectos{
+  background: skyblue;
+  /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
+   lo que haremos sera usar media querys y al llegar al limite en el que se salen los elementos de la caja
+   usar la propiedad height: 100vh auto; */
+  height: 100vh auto;
+  position: relative;
+}
+
+.proyectos h3{
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.pro-contenedor{
+  background: violet;
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: flex-end; */
+}
+
+.pro-contenedor .fondo{
+  font-size: 10vw;
+  opacity: .1;
+  background: violet;
+  position: absolute;
+  bottom: 0;
+}
+
+.cont-pro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: 80%;
+  padding-bottom: 2rem;
+}
+
+.caja-pro{
+  background: salmon;
+  width: 20rem;
+  height: 20rem;
+}
+
+
+/* =============================== FIN SECCION 4 ========================================= */
+
+/* ================================== SECCION 5 ========================================= */
+.contacto{
+  background: powderblue;
+  height: 100vh;
+  position: relative;
+}
+
+.contacto h3, .caja-contacto p{
+  color: #fff;
+}
+
+.contacto h3{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.cont-contacto{
+  display: flex;
+  justify-content: center;
+}
+
+.cont-contenedor{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cont-contenedor .fondo{
+  font-size: 10vw;
+  position: absolute;
+  bottom: 0;
+  opacity: .1;
+}
+
+/* =============================== FIN SECCION 5 ========================================= */
+/* ******************************** FIN CONTENIDO PAGINA **************************************** */
+
+/* ========================= ANIMACION PRESENTACION INICIO ========================================== */
+.text_shadows {
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+}
+
+/* animacion de sombras del texto inicial */
+@keyframes shadows {
+  0% {
+    text-shadow: 5px 5px 2px #000000;
+  }
+
+  10% {
+    text-shadow: 7px 7px 4px #000000;
+  }
+
+  20% {
+    text-shadow: 10px 10px 6px #000000;
+  }
+
+  30% {
+    text-shadow: 14px 14px 8px #000000;
+  }
+
+  40% {
+    text-shadow: 17px 17px 10px #000000;
+  }
+
+  50% {
+    text-shadow: 19px 19px 12px #000000;
+  }
+
+  60% {
+    text-shadow: 17px 17px 10px #000000;
+  }
+
+  70% {
+    text-shadow: 14px 14px 8px #000000;
+  }
+
+  80% {
+    text-shadow: 10px 10px 6px #000000;
+  }
+
+  90% {
+    text-shadow: 7px 7px 4px #000000;
+  }
+
+  100% {
+    text-shadow: 5px 5px 2px #000000;
+  }
+}
+
+/* movimiento del texto del inico */
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  40% {
+    transform: translate(-12px, -12px);
+  }
+
+  50% {
+    transform: translate(-12px, -12px);
+  }
+
+  60% {
+    transform: translate(-12px, -12px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* animacion de h1 al cargar la pagina */
+@keyframes anim-lineUp {
+  
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* ========================= FIN ANIMACION PRESENTACION INICIO ========================================== */
+
+
+/* ================================================================================================= */
+/* ===================================== MEDIA QUERYS ============================================== */
+/* media query para que al llegar a los 1136.9 pixeles se le asigne al contenedor el height: auto; 
+ y esto es para que los elementos dentro del contenedor "divs" no se salgan del contenedor y este 
+ ajuste su altura de manera automatica */
+@media screen and (max-width: 1136.9px) {
+  .proyectos{
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1363.5px) {
+  .habilidades{
+    height: auto;
+  }
+}
+
+/* ================================================================================================= */
+/* =================================== FIN MEDIA QUERYS ============================================ */
