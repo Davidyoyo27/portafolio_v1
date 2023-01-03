@@ -1,10 +1,10 @@
- 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Work+Sans&display=swap');
+/* links sacados de Google Fonts usados para el tipo de letra en la pagina */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Work+Sans&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #3d4152;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 /* Boton cerrar(X) del menu lateral */
-.sidenav a {
+.sidenav .cerrar-menu {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -80,7 +80,6 @@ body {
   inset: 20px 0 20px 20px;
   height: 90%;
   background: #fff;
-  /* transition: 0.5s; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,11 +103,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 0 10px;
-  cursor: pointer;
   transition: 0.5s;
-  /* mover el menu un poco mas arriba */
-  bottom: 2rem;
   right: 1rem;
+}
+
+/* quitar la decoracion a la etiqueta link <a/> */
+.menu ul a {
+  text-decoration: none;
 }
 
 /* iconos del menu */
@@ -120,8 +121,9 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  font-size: 1.75em;
+  font-size: 1.5rem;
   transition: 0.5s;
+  color: #000000;
 }
 
 /* cambio de color del icono del menu al estar activo */
@@ -129,10 +131,6 @@ body {
   color: #fff;
   background: var(--color);
 }
-
-/* .menu ul li.active .icon::before {
-  opacity: 0.5;
-} */
 
 /* estilos del texto del menu */
 .menu ul li .text {
@@ -142,18 +140,10 @@ body {
   display: flex;
   align-items: center;
   color: #333;
-  /* opacity: 1; */
-  /* visibility: hidden; */
-  /* transition: 0.5s; */
-}
-
-/* visibilidad del menu cuando esta abierto */
-.menu ul li .text {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* cambia el color de la opcion del menu segun que link este activo */
+/* colores asignados a cada link desde el HMTL */
 .menu ul li.active .text {
   color: var(--color);
 }
@@ -164,30 +154,9 @@ body {
 }
 
 /* ****************************** INICIO CONTENIDO PAGINA ************************************* */
-/* contenido de la pagina 2 */
-/* .inicio{
-  color: #fff;
-  background: brown;
-  animation: 3s anim-lineUp ease-out;
-  espaciado en la pagina
-  padding: 8rem 0rem 10rem 0rem;
-  height: 100vh;
-} */
-
-
-/* .inicio h2 {
-  color: white;
-  text-shadow: 20px 20px 10px #000000;
-  font-size: 4vw;
-  margin-left: 2rem;
-  background: turquoise;
-  espaciado(vertical/altura) de la letra la letra
-  line-height: 50%;
-  height: 4rem;
-} */
-
 /* =============================== SECCION 1 ========================================= */
-.presentacion{
+/* contenedor principal de la seccion */
+.presentacion {
   background: bisque;
   height: 100vh;
   display: flex;
@@ -196,44 +165,54 @@ body {
   animation: 3s anim-lineUp ease-out;
 }
 
-.inicio{
+/* texto presentacion del inicio */
+.inicio {
   background: brown;
   color: #fff;
   font-size: 3.5vw;
 }
 
 /* texto presentacion del inicio */
-.inicio h2{
+.inicio h2 {
   background: turquoise;
   line-height: 50%;
+}
+
+/* animacion de sombras inicio */
+.text_shadows {
+  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
 }
 
 /* =============================== FIN SECCION 1 ===================================== */
 
 /* =============================== SECCION 2 ========================================= */
-.habilidades{
-  background: violet;
+/* contenedor principal de la seccion */
+.habilidades {
   height: 100vh auto;
   position: relative;
+  cursor: default;
 }
 
-.habilidades h3{
-  text-align: center;
+/* titulo */
+.habilidades h3 {
+  margin-left: 1rem;
   font-size: 3rem;
   color: #fff;
 }
 
-.intro{
-  background: springgreen;
+/* margenes*/
+.intro {
   margin: 0rem 2rem 0rem 2rem;
 }
 
-.intro p{
+/* texto de presentacion y contenido de la seccion */
+.intro p {
   padding: 1rem 0rem 1rem 0rem;
   color: #fff;
 }
 
-.cont-caja{
+/* contenedor de los items */
+.cont-caja {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -241,8 +220,9 @@ body {
   padding-bottom: 2rem;
 }
 
-.caja{
-  background: teal;
+/* items */
+.caja {
+  background-color: #464b5f;
   width: 600px;
   height: 200px;
   display: flex;
@@ -250,19 +230,52 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  box-shadow: 2.8px 3.6px 2.2px rgba(0, 0, 0, 0.092),
+    6.7px 8.6px 5.3px rgba(0, 0, 0, 0.126),
+    12.5px 16.3px 10px rgba(0, 0, 0, 0.149),
+    22.3px 29px 17.9px rgba(0, 0, 0, 0.166),
+    41.8px 54.3px 33.4px rgba(0, 0, 0, 0.183),
+    100px 130px 80px rgba(0, 0, 0, 0.21);
 }
 
-.hab-contenedor .fondo{
-  font-size: 10vw;
+/* hover con z-index: 1; a la caja de los elementos para que al momento de generar el 
+  movimiento con la libreria de vanilla-tilt este no presente problemas con el movimiento 
+  por el fondo de la seccion que dice "Habilidades", ya que al superponerse el texto 
+  por encima de los items, al momento de mover el mouse donde hubiera texto este impedia 
+  su correcto funcionamiento  */
+.caja:hover {
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+/* al momento de colocar el mouse en la caja los elementos h2, ul y p sobresalen dando
+  un aspecto de 3D al momento de mover el mouse por el elemento con la clase "caja", 
+  para esto se necesita 2 propiedades, "transform-style: preserve-3d;" y "transform: translateZ(80px);" */
+.caja:hover h2,
+ul,
+p {
+  transform: translateZ(80px);
+}
+
+/* texto de fondo de seccion */
+.hab-contenedor .fondo {
+  font-size: 10em;
   position: absolute;
-  bottom: 0;
-  opacity: .1;
+  bottom: 4em;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.hab-contenedor {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* =============================== FIN SECCION 2====================================== */
 
 /* =============================== SECCION 3 ========================================= */
-.experiencia{
+/* contenedor principal de la seccion */
+.experiencia {
   background: yellow;
   /* margin-top: 10rem; */
   position: relative;
@@ -273,7 +286,7 @@ body {
   height: 100vh;
 }
 
-.experiencia h3{
+.experiencia h3 {
   background: tomato;
   text-align: center;
   font-size: 3rem;
@@ -281,7 +294,7 @@ body {
   color: #fff;
 }
 
-.contenedor{
+.contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,25 +303,24 @@ body {
   color: #fff;
 }
 
-.caja_dos{
+.caja_dos {
   background: yellowgreen;
   width: 90%;
   height: 400px;
-  /* margin: 7rem 0rem 7rem 0rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.exp-contenedor{
+.exp-contenedor {
   display: flex;
   justify-content: flex-end;
 }
 
-.exp-contenedor .fondo{
+.exp-contenedor .fondo {
   font-size: 10vw;
   background: turquoise;
-  opacity: .1;
+  opacity: 0.1;
   position: absolute;
   /* establecemos con el bottom el 0 (cero) para que su posicion este dentro del margen
    del contenedor experiencia */
@@ -317,7 +329,8 @@ body {
 /* =============================== FIN SECCION 3 ========================================= */
 
 /* =============================== SECCION 4 ========================================= */
-.proyectos{
+/* contenedor principal de la seccion */
+.proyectos {
   background: skyblue;
   /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
    lo que haremos sera usar media querys y al llegar al limite en el que se salen los elementos de la caja
@@ -326,28 +339,27 @@ body {
   position: relative;
 }
 
-.proyectos h3{
+.proyectos h3 {
   text-align: center;
   font-size: 3rem;
   color: #fff;
 }
 
-.pro-contenedor{
+.pro-contenedor {
   background: violet;
   display: flex;
   align-items: flex-start;
-  /* justify-content: flex-end; */
 }
 
-.pro-contenedor .fondo{
+.pro-contenedor .fondo {
   font-size: 10vw;
-  opacity: .1;
+  opacity: 0.1;
   background: violet;
   position: absolute;
   bottom: 0;
 }
 
-.cont-pro{
+.cont-pro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,56 +369,53 @@ body {
   padding-bottom: 2rem;
 }
 
-.caja-pro{
+.caja-pro {
   background: salmon;
   width: 20rem;
   height: 20rem;
 }
 
-
 /* =============================== FIN SECCION 4 ========================================= */
 
 /* ================================== SECCION 5 ========================================= */
-.contacto{
+/* contenedor principal de la seccion */
+.contacto {
   background: powderblue;
   height: 100vh;
   position: relative;
 }
 
-.contacto h3, .caja-contacto p{
+.contacto h3,
+.caja-contacto p {
   color: #fff;
 }
 
-.contacto h3{
+.contacto h3 {
   text-align: center;
   font-size: 3rem;
 }
 
-.cont-contacto{
+.cont-contacto {
   display: flex;
   justify-content: center;
 }
 
-.cont-contenedor{
+.cont-contenedor {
   display: flex;
   justify-content: flex-end;
 }
 
-.cont-contenedor .fondo{
+.cont-contenedor .fondo {
   font-size: 10vw;
   position: absolute;
   bottom: 0;
-  opacity: .1;
+  opacity: 0.1;
 }
 
 /* =============================== FIN SECCION 5 ========================================= */
 /* ******************************** FIN CONTENIDO PAGINA **************************************** */
 
 /* ========================= ANIMACION PRESENTACION INICIO ========================================== */
-.text_shadows {
-  animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
-}
-
 /* animacion de sombras del texto inicial */
 @keyframes shadows {
   0% {
@@ -479,7 +488,6 @@ body {
 
 /* animacion de h1 al cargar la pagina */
 @keyframes anim-lineUp {
-  
   0% {
     opacity: 0;
     transform: translateY(80%);
@@ -502,22 +510,32 @@ body {
 
 /* ========================= FIN ANIMACION PRESENTACION INICIO ========================================== */
 
-
 /* ================================================================================================= */
 /* ===================================== MEDIA QUERYS ============================================== */
-/* media query para que al llegar a los 1136.9 pixeles se le asigne al contenedor el height: auto; 
- y esto es para que los elementos dentro del contenedor "divs" no se salgan del contenedor y este 
- ajuste su altura de manera automatica */
-@media screen and (max-width: 1136.9px) {
-  .proyectos{
-    height: auto;
+@media screen and (max-width: 767px) {
+
+  /* ====================== SECCION 1 ================================ */
+  /* ====================== FIN SECCION 1 ================================ */
+
+  /* ======== HABILIDADES - SECCION 2 ============== */
+  .caja {
+    max-width: 30rem;
+  }
+
+  .hab-contenedor .fondo {
+    font-size: 6rem;
+  }
+  /* ========== FIN HABILIDADES SECCION 2 =========== */
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .hab-contenedor .fondo {
+    font-size: 6rem;
   }
 }
 
-@media screen and (max-width: 1363.5px) {
-  .habilidades{
-    height: auto;
-  }
+@media screen and (min-width: 1024px) {
 }
 
 /* ================================================================================================= */

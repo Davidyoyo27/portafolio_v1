@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Document</title>
@@ -16,38 +17,46 @@
       <!-- FIN ICONO -->
       <div class="menu">
         <ul>
-          <li class="list-item active" style="--color: #f44336">
-            <a href="#inicio">
+          <a href="#inicio">
+            <li class="list-item active" style="--color: #f44336">
               <span class="icon">
                 <ion-icon name="home"></ion-icon>
               </span>
               <span class="text">Inicio</span>
-            </a>
-          </li>
-          <li class="list-item" style="--color: #ffa117">
-            <span class="icon">
-              <ion-icon name="stats"></ion-icon>
-            </span>
-            <span class="text">Habilidades</span>
-          </li>
-          <li class="list-item" style="--color: #0fc70f">
-            <span class="icon">
-              <ion-icon name="briefcase"></ion-icon>
-            </span>
-            <span class="text">Experiencia</span>
-          </li>
-          <li class="list-item" style="--color: #2196f3">
-            <span class="icon">
-              <ion-icon name="grid"></ion-icon>
-            </span>
-            <span class="text">Proyectos</span>
-          </li>
-          <li class="list-item" style="--color: #b145e9">
-            <span class="icon">
-              <ion-icon name="call"></ion-icon>
-            </span>
-            <span class="text">Contacto</span>
-          </li>
+            </li>
+          </a>
+          <a href="#habilidades">
+            <li class="list-item" style="--color: #ffa117">
+              <span class="icon">
+                <ion-icon name="stats"></ion-icon>
+              </span>
+              <span class="text">Habilidades</span>
+            </li>
+          </a>
+          <a href="#experiencia">
+            <li class="list-item" style="--color: #0fc70f">
+              <span class="icon">
+                <ion-icon name="briefcase"></ion-icon>
+              </span>
+              <span class="text">Experiencia</span>
+            </li>
+          </a>
+          <a href="#proyectos">
+            <li class="list-item" style="--color: #2196f3">
+              <span class="icon">
+                <ion-icon name="grid"></ion-icon>
+              </span>
+              <span class="text">Proyectos</span>
+            </li>
+          </a>
+          <a href="#contacto">
+            <li class="list-item" style="--color: #b145e9">
+              <span class="icon">
+                <ion-icon name="call"></ion-icon>
+              </span>
+              <span class="text">Contacto</span>
+            </li>
+          </a>
         </ul>
       </div>
     </div>
@@ -70,59 +79,82 @@
       </div>
       <!-- FIN SECCION 1 -->
       <!-- SECCION 2 -->
-      <div class="habilidades">
-        <h3>Conocimientos</h3>
-        <div class="intro">
-          <p>Soy Ingeniero en Informatica y me interesa mucho el Desarrollo Web de Santiago, Chile. Este portafolio fue desarrollado 
-            utilizando unicamente HTML y CSS puro, aquí tambien podras ver una lista con los
-            conocimientos que poseo actualmente.</p>
+      <div id="habilidades" class="habilidades">
+        <div data-aos="fade-up" 
+        data-aos-delay="250"
+        data-aos-anchor-placement="top-center">
+          <h3>Conocimientos</h3>
+        </div>
+        <div data-aos="zoom-in">
+          <div class="intro">
+            <p>
+              Soy Ingeniero en Informática y me interesa mucho el Desarrollo Web,
+              actualmente resido en Santiago, Chile. Este portafolio fue
+              desarrollado utilizando unicamente HTML, CSS puro (Flexbox) y
+              JavaScript, aquí también podrás ver los conocimientos que poseo
+              actualmente.
+            </p>
+          </div>
         </div>
         <div class="cont-caja">
-          <div class="caja">
-            <h2>Lenguajes de Programación</h2>
-            <ul>
-              <li>C#(WCF) (Intermedio)</li>
-              <li>Python (Básico)</li>
-              <li>Javascript (Básico)</li>
-            </ul>
+          <div data-aos="fade-right">
+            <div class="caja">
+              <h2>Lenguajes de Programación</h2>
+              <ul>
+                <li>C#(WCF) (Intermedio)</li>
+                <li>Python (Básico)</li>
+                <li>Javascript (Básico)</li>
+              </ul>
+            </div>
           </div>
-          <div class="caja">
-            <h2>Lenguajes</h2>
-            <ul>
-              <li>HTML y CSS (Intermedio)</li>
-            </ul>
+          <div data-aos="fade-left">
+            <div class="caja">
+              <h2>Lenguajes</h2>
+              <ul>
+                <li>HTML y CSS (Intermedio)</li>
+              </ul>
+            </div>
           </div>
-          <div class="caja">
-            <h2>Front-End</h2>
-            <ul>
-              <li>Vue.js (Intermedio)</li>
-            </ul>
+          <div data-aos="fade-right">
+            <div class="caja">
+              <h2>Front-End</h2>
+              <ul>
+                <li>Vue.js (Intermedio)</li>
+              </ul>
+            </div>
           </div>
-          <div class="caja">
-            <h2>Back-End</h2>
-            <ul>
-              <li>Django (Básico)</li>
-            </ul>
+          <div data-aos="fade-left">
+            <div class="caja">
+              <h2>Back-End</h2>
+              <ul>
+                <li>Django (Básico)</li>
+              </ul>
+            </div>
           </div>
-          <div class="caja">
-            <h2>Base de Datos</h2>
-            <ul>
-              <li>MySQL (Intermedio)</li>
-              <li>Oracle (Intermedio)</li>
-              <li>SQL Server (Intermedio)</li>
-            </ul>
+          <div data-aos="fade-right">
+            <div class="caja">
+              <h2>Base de Datos</h2>
+              <ul>
+                <li>MySQL (Intermedio)</li>
+                <li>Oracle (Intermedio)</li>
+                <li>SQL Server (Intermedio)</li>
+              </ul>
+            </div>
           </div>
-          <div class="caja">
-            <p>Ingles: Intermedio</p>
+          <div data-aos="fade-left">
+            <div class="caja">
+              <h2>Idioma Extranjero</h2>
+              <p>Ingles: Intermedio</p>
+            </div>
           </div>
-        </div>
+          </div>
         <div class="hab-contenedor">
           <h1 class="fondo">Habilidades</h1>
         </div>
       </div>
       <!-- FIN SECCION 2 -->
       <!-- SECCION 3 -->
-      <div class="experiencia">
+      <div id="experiencia" class="experiencia">
         <h3>Experiencia Laboral</h3>
         <div class="contenedor">
           <div class="caja_dos">
@@ -130,7 +162,13 @@
             <p>Empresa: Consorcio Nacional de Seguros Vida</p>
             <p>Cargo: Practicante</p>
             <ul>
-              <li>Front-End: Desarrollo de modulos para el Sistema Web consumiendo los endpoints con el Framework Vue.js</li>
+              <li>
+                Front-End: Desarrollo de modulos para el Sistema Web consumiendo
+                los endpoints con el Framework Vue.js
+              </li>
+              <ul>
+                <li>Login</li>
+              </ul>
             </ul>
           </div>
         </div>
@@ -140,7 +178,7 @@
       </div>
       <!-- FIN SECCION 3 -->
       <!-- SECCION 4 -->
-      <div class="proyectos">
+      <div id="proyectos" class="proyectos">
         <h3>Proyectos</h3>
         <div class="cont-pro">
           <div class="caja-pro"></div>
@@ -155,12 +193,14 @@
       </div>
       <!-- FIN SECCION 4 -->
       <!-- SECCION 5 -->
-      <div class="contacto">
+      <div id="contacto" class="contacto">
         <h3>Contacto</h3>
         <div class="cont-contacto">
           <div class="caja-contacto">
-            <p>aqui va todo lo del contacto ya sea la info o 
-            en su defecto un formulario para enviar algun correo</p>
+            <p>
+              aqui va todo lo del contacto ya sea la info o en su defecto un
+              formulario para enviar algun correo
+            </p>
           </div>
         </div>
         <div class="cont-contenedor">
@@ -172,6 +212,21 @@
     </div>
     <!-- FIN CONTENIDO PAGINA -->
 
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="text/javascript">
+      AOS.init({
+        duration: 1000,
+      });
+
+      VanillaTilt.init(document.querySelectorAll(".caja"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+      });
+    </script>
+
   </body>
 </html>
