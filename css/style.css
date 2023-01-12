@@ -157,7 +157,6 @@ body {
 /* =============================== SECCION 1 ========================================= */
 /* contenedor principal de la seccion */
 .presentacion {
-  background: bisque;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -167,20 +166,31 @@ body {
 
 /* texto presentacion del inicio */
 .inicio {
-  background: brown;
   color: #fff;
   font-size: 3.5vw;
 }
 
 /* texto presentacion del inicio */
 .inicio h2 {
-  background: turquoise;
   line-height: 50%;
 }
 
 /* animacion de sombras inicio */
 .text_shadows {
   animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+}
+
+.ini_text {
+  display: flex;
+  height: 9rem;
+  cursor: default;
+}
+
+.ini_text p:hover{
+  color: aqua;
+  transition: .5s;
+  animation: anim-moveLetter .8s ease-in;
+  animation-iteration-count: 1;
 }
 
 /* =============================== FIN SECCION 1 ===================================== */
@@ -191,6 +201,8 @@ body {
   height: 100vh auto;
   position: relative;
   cursor: default;
+  margin-bottom: 7rem;
+  padding-top: 1rem;
 }
 
 /* titulo */
@@ -201,12 +213,12 @@ body {
 }
 
 /* margenes*/
-.intro {
+.text_info {
   margin: 0rem 2rem 0rem 2rem;
 }
 
 /* texto de presentacion y contenido de la seccion */
-.intro p {
+.text_info p {
   padding: 1rem 0rem 1rem 0rem;
   color: #fff;
 }
@@ -261,7 +273,7 @@ p {
 .hab-contenedor .fondo {
   font-size: 10em;
   position: absolute;
-  bottom: 4em;
+  bottom: 3.7em;
   opacity: 0.1;
   z-index: -1;
 }
@@ -276,21 +288,19 @@ p {
 /* =============================== SECCION 3 ========================================= */
 /* contenedor principal de la seccion */
 .experiencia {
-  background: yellow;
-  /* margin-top: 10rem; */
   position: relative;
   /* de manera inicial cuando tenga poca informacion el contenedor usar 100 vh, ya que este le da
    el alto completo que tenga la pantalla en donde se este visualizando(monitor), cuando el contenido en 
    el contenedor aumente simplemente agregar al height: 100vh auto; ya que esto agregara el resto del contenido
    sin problemas dentro de los margenes del contenedor, o en su defecto quitar simplemente el height*/
   height: 100vh;
+  padding-top: 1rem;
+  cursor: default;
 }
 
 .experiencia h3 {
-  background: tomato;
   text-align: center;
   font-size: 3rem;
-  /* margin: 4rem 0rem 4rem 0rem; */
   color: #fff;
 }
 
@@ -304,12 +314,12 @@ p {
 }
 
 .caja_dos {
-  background: yellowgreen;
   width: 90%;
-  height: 400px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 .exp-contenedor {
@@ -319,7 +329,6 @@ p {
 
 .exp-contenedor .fondo {
   font-size: 10vw;
-  background: turquoise;
   opacity: 0.1;
   position: absolute;
   /* establecemos con el bottom el 0 (cero) para que su posicion este dentro del margen
@@ -331,7 +340,6 @@ p {
 /* =============================== SECCION 4 ========================================= */
 /* contenedor principal de la seccion */
 .proyectos {
-  background: skyblue;
   /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
    lo que haremos sera usar media querys y al llegar al limite en el que se salen los elementos de la caja
    usar la propiedad height: 100vh auto; */
@@ -346,7 +354,6 @@ p {
 }
 
 .pro-contenedor {
-  background: violet;
   display: flex;
   align-items: flex-start;
 }
@@ -354,7 +361,6 @@ p {
 .pro-contenedor .fondo {
   font-size: 10vw;
   opacity: 0.1;
-  background: violet;
   position: absolute;
   bottom: 0;
 }
@@ -370,7 +376,6 @@ p {
 }
 
 .caja-pro {
-  background: salmon;
   width: 20rem;
   height: 20rem;
 }
@@ -380,7 +385,6 @@ p {
 /* ================================== SECCION 5 ========================================= */
 /* contenedor principal de la seccion */
 .contacto {
-  background: powderblue;
   height: 100vh;
   position: relative;
 }
@@ -508,6 +512,53 @@ p {
   }
 }
 
+/* animacion para el movimiento de el texto del inicio */
+@keyframes anim-moveLetter {
+  0% {
+    transform: skewY(5deg);
+  }
+
+  10% {
+    transform: skewY(12deg);
+  }
+
+  20% {
+    transform: skewY(20deg);
+  }
+
+  30% {
+    transform: skewX(5deg);
+  }
+
+  40% {
+    transform: skewX(12deg);
+  }
+
+  50% {
+    transform: skewX(20deg);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  70% {
+    transform: scale(1.3);
+  }
+
+  80% {
+    transform: scale(1.4);
+  }
+
+  90% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 /* ========================= FIN ANIMACION PRESENTACION INICIO ========================================== */
 
 /* ================================================================================================= */
@@ -536,7 +587,10 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  
 }
 
 /* ================================================================================================= */
 /* =================================== FIN MEDIA QUERYS ============================================ */
+
+

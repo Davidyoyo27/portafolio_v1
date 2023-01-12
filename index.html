@@ -69,27 +69,67 @@
       <!-- FIN ICONO -->
 
       <!-- CONTENIDO PAGINA 2 -->
+
       <!-- SECCION 1 -->
       <div id="inicio" class="presentacion">
         <div class="inicio">
-          <h2 class="text_shadows">Hola,</h2>
-          <h2 class="text_shadows">Soy David,</h2>
-          <h2 class="text_shadows">Desarrollador Web.</h2>
+          <h2 class="text_shadows">
+            <div class="ini_text">
+              <p>H</p>
+              <p>o</p>
+              <p>l</p>
+              <p>a</p>
+              <p>,</p>
+            </div>
+            <div class="ini_text">
+              <p>S</p>
+              <p>o</p>
+              <p>y</p>
+              <p>&nbsp;</p>
+              <p>D</p>
+              <p>a</p>
+              <p>v</p>
+              <p>i</p>
+              <p>d</p>
+              <p>,</p>
+            </div>
+            <div class="ini_text">
+              <p>D</p>
+              <p>e</p>
+              <p>s</p>
+              <p>a</p>
+              <p>r</p>
+              <p>r</p>
+              <p>o</p>
+              <p>l</p>
+              <p>l</p>
+              <p>a</p>
+              <p>d</p>
+              <p>o</p>
+              <p>r</p>
+              <p>&nbsp;</p>
+              <p>W</p>
+              <p>e</p>
+              <p>b</p>
+              <p>.</p>
+            </div>
+          </h2>
         </div>
       </div>
       <!-- FIN SECCION 1 -->
       <!-- SECCION 2 -->
       <div id="habilidades" class="habilidades">
-        <div data-aos="fade-up" 
-        data-aos-delay="250"
-        data-aos-anchor-placement="top-center">
+        <div
+          data-aos="fade-up"
+          data-aos-offset="500"
+        >
           <h3>Conocimientos</h3>
         </div>
         <div data-aos="zoom-in">
-          <div class="intro">
+          <div class="text_info">
             <p>
-              Soy Ingeniero en Informática y me interesa mucho el Desarrollo Web,
-              actualmente resido en Santiago, Chile. Este portafolio fue
+              Soy Ingeniero en Informática y me interesa mucho el Desarrollo
+              Web, actualmente resido en Santiago, Chile. Este portafolio fue
               desarrollado utilizando unicamente HTML, CSS puro (Flexbox) y
               JavaScript, aquí también podrás ver los conocimientos que poseo
               actualmente.
@@ -147,7 +187,7 @@
               <p>Ingles: Intermedio</p>
             </div>
           </div>
-          </div>
+        </div>
         <div class="hab-contenedor">
           <h1 class="fondo">Habilidades</h1>
         </div>
@@ -155,21 +195,56 @@
       <!-- FIN SECCION 2 -->
       <!-- SECCION 3 -->
       <div id="experiencia" class="experiencia">
+        <div data-aos="fade-up"
+        data-aos-offset="400">
         <h3>Experiencia Laboral</h3>
+        </div>
         <div class="contenedor">
-          <div class="caja_dos">
-            <b>Dic. 2021 - Feb. 2022</b>
-            <p>Empresa: Consorcio Nacional de Seguros Vida</p>
-            <p>Cargo: Practicante</p>
-            <ul>
-              <li>
-                Front-End: Desarrollo de modulos para el Sistema Web consumiendo
-                los endpoints con el Framework Vue.js
-              </li>
+          <div data-aos="zoom-in">
+            <div class="caja_dos">
+              <b>Dic. 2021 - Feb. 2022</b>
+              <p>Empresa: Consorcio Nacional de Seguros Vida</p>
+              <p>Cargo: Practicante</p>
               <ul>
-                <li>Login</li>
+                <li>
+                  Front-End: Desarrollo de modulos para la creacion de 
+                  un Sistema Web (Área de Calidad y DevOps) 
+                  consumiendo los endpoints con el Framework 
+                  Vue.js
+                </li>
+                <ul>
+                  <li>Login</li>
+                  <li>Modulo de reportes de Bamboo: El cual mostraba 
+                    la información de los planes de Bamboo creados 
+                    hasta la fecha y era posible exportarlos a un 
+                    Excel de ser necesario para su manipulación</li>
+                  <li>Modulo de reportes de SonarQube: El cual mostraba 
+                    la información de los proyectos de la empresa, 
+                    tales como categorías, vulnerabilidades, rating, 
+                    bloqueantes, críticos, etc. Todo ello datos 
+                    concernientes a cada proyecto según como necesitasen 
+                    visualizar la información o los datos, también esta 
+                    información es posible exportarla a Excel o CSV.</li>
+                  <li>Modulo de Deploys en Bamboo: El cual mostraba el 
+                    estado de los despliegues de los proyectos en las 
+                    distintas áreas (QA, Desarrollo y Producción) según 
+                    los filtros ingresados, la visualización de la 
+                    información es la siguiente:</li>
+                    <ul>
+                      <li>Año: Según el año o rango de años que se 
+                        desee visualizar.</li>
+                      <li>Estado: El cual puede ser SUCCESS (exitoso) 
+                        o FAILED (fallido).</li>
+                      <li>Total: Muestra la cantidad de total de los 
+                        despliegues separados por fallidos y exitoso 
+                        según corresponda.</li>
+                      <li>Meses: Muestra específicamente en que mes 
+                        del año consultado se encuentra el estado del 
+                        despliegue del proyecto.</li>
+                    </ul>
+                </ul>
               </ul>
-            </ul>
+            </div>
           </div>
         </div>
         <div class="exp-contenedor">
@@ -180,6 +255,9 @@
       <!-- SECCION 4 -->
       <div id="proyectos" class="proyectos">
         <h3>Proyectos</h3>
+        <div class="text_info">
+          <p>Aqui hay algunos de los proyectos que he realizado</p>
+        </div>
         <div class="cont-pro">
           <div class="caja-pro"></div>
           <div class="caja-pro"></div>
@@ -215,6 +293,8 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="js/animation-staggering-demo.js"></script>
+    <script src="anime.min.js"></script>
 
     <script type="text/javascript">
       AOS.init({
@@ -227,6 +307,5 @@
         glare: true,
       });
     </script>
-
   </body>
 </html>
