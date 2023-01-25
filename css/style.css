@@ -3,9 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Work+Sans&display=swap");
 
+/* propiedad que permite un movimiento de transicion suave al 
+  navegar entre las opciones del menu*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #3d4152;
+  padding: 0;
+  margin: 0;
 }
 
 /* menu lateral */
@@ -69,6 +77,28 @@ body {
   color: #818181;
   transition: 0.5s;
 }
+
+/* ----------------- boton de abrir menu ------------- */
+/* button{
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  background: transparent;
+  gap: .65rem;
+  background-color: aqua;
+}
+
+button > div{
+  background: black;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all .5s;
+  transform-origin: left;
+} */
+/* ------------ fin boton abrir menu --------------- */
 
 /* cursor del boton cerrar del menu */
 .cerrar-menu {
@@ -153,6 +183,46 @@ body {
   transform: translateX(30px);
 }
 
+/* contenedor del icono de iniciar la animacion */
+#icon-refresh {
+  display: flex;
+  justify-content: flex-end;
+  background-color: aqua;
+}
+
+/* icono de actualizar */
+#icon-refresh ion-icon {
+  color: #fff;
+  font-size: 4rem;
+  position: absolute;
+  right: 7rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* --------------- scrollbar -------------------- */
+/* los cambios solo se reflejan en estos mavegadores:*/
+/* Chrome, Opera, Edge */
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px;
+}
+/* ----------------- fin scrollbar -----------------*/
+
+/* el menu secundario se oculta de manera predefinida cuando no se esta en 
+  una tamaño de pantalla mas reducido */
+.wrapper {
+  display: none;
+}
+
+
 /* ****************************** INICIO CONTENIDO PAGINA ************************************* */
 /* =============================== SECCION 1 ========================================= */
 /* contenedor principal de la seccion */
@@ -162,6 +232,7 @@ body {
   flex-direction: column;
   justify-content: center;
   animation: 3s anim-lineUp ease-out;
+  position: relative;
 }
 
 /* texto presentacion del inicio */
@@ -176,20 +247,22 @@ body {
 }
 
 /* animacion de sombras inicio */
-.text_shadows {
+/* .text_shadows {
   animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
-}
+} */
 
+/* contenedor del texto de la presentacion inicial */
 .ini_text {
   display: flex;
   height: 9rem;
   cursor: default;
 }
 
-.ini_text p:hover{
+/* animacion del texto(por letra) inicial al pasar el mouse por encima */
+.ini_text p:hover {
   color: aqua;
-  transition: .5s;
-  animation: anim-moveLetter .8s ease-in;
+  transition: 0.5s;
+  animation: anim-moveLetter 0.8s ease-in;
   animation-iteration-count: 1;
 }
 
@@ -223,24 +296,35 @@ body {
   color: #fff;
 }
 
-/* contenedor de los items */
-.cont-caja {
+/* contenedor del .cont-caja para centrarlo */
+.container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  background-color: brown;
+}
+
+/* contenedor de los items */
+.cont-caja {
+  display: grid;
+  /* width: 65%; */
+  /* propiedad que permite el auto ajuste del ancho de los items segun el tamaño
+    de la pantalla */
+  grid-template-columns: repeat(2, minmax(200px, 600px));
   gap: 20px;
-  padding-bottom: 2rem;
+  /* padding: 10px; */
+  background-color: aqua;
 }
 
 /* items */
 .caja {
+  display: grid;
+  place-items: center;
+  /* padding: 40px; */
+  /* padding: 40px 80px 40px 80px; */
+  background-color: orange;
+  /* propiedad que permite asignar un tamaño standar para todos los items */
+  grid-auto-rows: 100px;
   background-color: #464b5f;
-  width: 600px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #fff;
   box-shadow: 2.8px 3.6px 2.2px rgba(0, 0, 0, 0.092),
     6.7px 8.6px 5.3px rgba(0, 0, 0, 0.126),
@@ -248,6 +332,7 @@ body {
     22.3px 29px 17.9px rgba(0, 0, 0, 0.166),
     41.8px 54.3px 33.4px rgba(0, 0, 0, 0.183),
     100px 130px 80px rgba(0, 0, 0, 0.21);
+  margin: 0rem 0rem 0rem 0rem;
 }
 
 /* hover con z-index: 1; a la caja de los elementos para que al momento de generar el 
@@ -278,6 +363,7 @@ p {
   z-index: -1;
 }
 
+/* texto de fondo de la seccion */
 .hab-contenedor {
   display: flex;
   justify-content: flex-end;
@@ -298,6 +384,7 @@ p {
   cursor: default;
 }
 
+/* titulo */
 .experiencia h3 {
   text-align: center;
   font-size: 3rem;
@@ -311,22 +398,25 @@ p {
   flex-direction: column;
   gap: 20px;
   color: #fff;
+  margin: 0rem 2rem 0rem 2rem;
 }
 
+/* items */
 .caja_dos {
   width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
+/* contenedor texto fondo */
 .exp-contenedor {
   display: flex;
   justify-content: flex-end;
 }
 
+/* texto de fondo de la seccion */
 .exp-contenedor .fondo {
   font-size: 10vw;
   opacity: 0.1;
@@ -340,6 +430,7 @@ p {
 /* =============================== SECCION 4 ========================================= */
 /* contenedor principal de la seccion */
 .proyectos {
+  background: skyblue;
   /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
    lo que haremos sera usar media querys y al llegar al limite en el que se salen los elementos de la caja
    usar la propiedad height: 100vh auto; */
@@ -354,15 +445,9 @@ p {
 }
 
 .pro-contenedor {
+  background: violet;
   display: flex;
   align-items: flex-start;
-}
-
-.pro-contenedor .fondo {
-  font-size: 10vw;
-  opacity: 0.1;
-  position: absolute;
-  bottom: 0;
 }
 
 .cont-pro {
@@ -376,8 +461,18 @@ p {
 }
 
 .caja-pro {
+  background: salmon;
   width: 20rem;
   height: 20rem;
+}
+
+/* texto de fondo de la seccion */
+.pro-contenedor .fondo {
+  font-size: 10vw;
+  opacity: 0.1;
+  background: violet;
+  position: absolute;
+  bottom: 0;
 }
 
 /* =============================== FIN SECCION 4 ========================================= */
@@ -385,6 +480,7 @@ p {
 /* ================================== SECCION 5 ========================================= */
 /* contenedor principal de la seccion */
 .contacto {
+  background: powderblue;
   height: 100vh;
   position: relative;
 }
@@ -409,6 +505,7 @@ p {
   justify-content: flex-end;
 }
 
+/* texto de fondo de la seccion */
 .cont-contenedor .fondo {
   font-size: 10vw;
   position: absolute;
@@ -564,33 +661,314 @@ p {
 /* ================================================================================================= */
 /* ===================================== MEDIA QUERYS ============================================== */
 @media screen and (max-width: 767px) {
-
   /* ====================== SECCION 1 ================================ */
-  /* ====================== FIN SECCION 1 ================================ */
+  /* ==================== FIN SECCION 1 ============================== */
 
-  /* ======== HABILIDADES - SECCION 2 ============== */
-  .caja {
-    max-width: 30rem;
-  }
-
+  /* ========================= SECCION 2 ============================= */
+  /* texto de fondo */
   .hab-contenedor .fondo {
     font-size: 6rem;
   }
-  /* ========== FIN HABILIDADES SECCION 2 =========== */
+  /* ======================= FIN SECCION 2 ============================ */
+  /* al tener X tamaño de pantalla se veran los items en 1 columna */
+  .cont-caja {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
+  /* ocultamos el menu */
+  #abrir-menu {
+    visibility: hidden;
+  }
+
+  /* -------------------- menu 2 ---------------------- */
+  .cont-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper {
+    display: inline-flex;
+    background-color: #e7eaf6;
+    position: fixed;
+    bottom: 2rem;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .wrapper a {
+    border-radius: 50%;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    margin: 0 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 50%;
+  }
+
+  .wrapper .icon:hover a ion-icon{
+    color: #fff;
+  }
+
+  .wrapper .icon span {
+    position: relative;
+    z-index: 3;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .wrapper .icon span ion-icon {
+    position: absolute;
+    font-size: 35px;
+    line-height: 60px;
+    right: 12px;
+    top: 10px;
+    color: #000000;
+  }
+
+  .wrapper .icon .tooltip {
+    position: absolute;
+    top: 0px;
+    color: #fff;
+    background: #fff;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover .tooltip {
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .wrapper .icon .tooltip::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .wrapper .html:hover span,
+  .wrapper .html:hover .tooltip,
+  .wrapper .html:hover .tooltip::before {
+    background: #f44336;
+  }
+
+  .wrapper .css:hover span,
+  .wrapper .css:hover .tooltip,
+  .wrapper .css:hover .tooltip::before {
+    background: #ffa117;
+  }
+
+  .wrapper .js:hover span,
+  .wrapper .js:hover .tooltip,
+  .wrapper .js:hover .tooltip::before {
+    background: #0fc70f;
+  }
+
+  .wrapper .react:hover span,
+  .wrapper .react:hover .tooltip,
+  .wrapper .react:hover .tooltip::before {
+    background: #2196f3;
+  }
+
+  .wrapper .angular:hover span,
+  .wrapper .angular:hover .tooltip,
+  .wrapper .angular:hover .tooltip::before {
+    background: #b145e9;
+  }
+  /* ------------------ fin menu 2 -------------------- */
+
+  /* contenido de la pagina 1*/
+  #main {
+    transition: margin-left 0.5s;
+    padding: 0rem 2rem 0rem 1rem;
+    margin-right: 0rem;
+  }
+
+  /* ========================= FIN SECCION 2 ========================== */
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
+  /* texto de fondo */
   .hab-contenedor .fondo {
     font-size: 6rem;
+  }
+
+  /* .caja h2{
+    text-align: center;
+    margin-bottom: 4rem;
+  } */
+
+  /* ocultamos el menu */
+  #abrir-menu {
+    visibility: hidden;
+  }
+
+  /* -------------------- menu 2 ---------------------- */
+  .cont-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper {
+    display: inline-flex;
+    background-color: #e7eaf6;
+    position: fixed;
+    bottom: 2rem;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .wrapper a {
+    border-radius: 50%;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    margin: 0 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 50%;
+  }
+
+  .wrapper .icon:hover a ion-icon{
+    color: #fff;
+  }
+
+  .wrapper .icon span {
+    position: relative;
+    z-index: 3;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .wrapper .icon span ion-icon {
+    position: absolute;
+    font-size: 35px;
+    line-height: 60px;
+    right: 12px;
+    top: 10px;
+    color: #000000;
+  }
+
+  .wrapper .icon .tooltip {
+    position: absolute;
+    top: 0px;
+    color: #fff;
+    background: #fff;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover .tooltip {
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .wrapper .icon .tooltip::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .wrapper .html:hover span,
+  .wrapper .html:hover .tooltip,
+  .wrapper .html:hover .tooltip::before {
+    background: #f44336;
+  }
+
+  .wrapper .css:hover span,
+  .wrapper .css:hover .tooltip,
+  .wrapper .css:hover .tooltip::before {
+    background: #ffa117;
+  }
+
+  .wrapper .js:hover span,
+  .wrapper .js:hover .tooltip,
+  .wrapper .js:hover .tooltip::before {
+    background: #0fc70f;
+  }
+
+  .wrapper .react:hover span,
+  .wrapper .react:hover .tooltip,
+  .wrapper .react:hover .tooltip::before {
+    background: #2196f3;
+  }
+
+  .wrapper .angular:hover span,
+  .wrapper .angular:hover .tooltip,
+  .wrapper .angular:hover .tooltip::before {
+    background: #b145e9;
+  }
+  /* ------------------ fin menu 2 -------------------- */
+
+  /* contenido de la pagina 1*/
+  #main {
+    transition: margin-left 0.5s;
+    padding: 0rem 2rem 0rem 1rem;
+    margin-right: 0rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  
+  /* .caja h2{
+    text-align: center;
+  } */
 }
 
 /* ================================================================================================= */
 /* =================================== FIN MEDIA QUERYS ============================================ */
-
-

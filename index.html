@@ -65,13 +65,20 @@
     <!-- CONTENIDO PAGINA 1-->
     <div id="main">
       <!-- ICONO HAMBURGUESA DEL MENU -->
-      <span id="abrir-menu" onclick="abrirNav()">&#9776;</span>
+      <div id="abrir-menu" onclick="abrirNav()">
+        <ion-icon name="menu"></ion-icon>
+      </div>
       <!-- FIN ICONO -->
 
       <!-- CONTENIDO PAGINA 2 -->
 
       <!-- SECCION 1 -->
       <div id="inicio" class="presentacion">
+        <!-- ICONO ACTUALIZAR ANIMACION -->
+        <div id="icon-refresh">
+          <ion-icon name="refresh" onclick="animacion();"></ion-icon>
+        </div>
+        <!-- FIN ICONO ACTUALIZAR ANIMACION -->
         <div class="inicio">
           <h2 class="text_shadows">
             <div class="ini_text">
@@ -117,12 +124,45 @@
         </div>
       </div>
       <!-- FIN SECCION 1 -->
+      <!-- MENU 2 -->
+      <div class="cont-wrapper">
+        <div class="wrapper">
+          <div class="icon html">
+            <a href="#inicio">
+              <span><ion-icon name="home"></ion-icon></span>
+            </a>
+            <div class="tooltip">Inicio</div>
+          </div>
+          <div class="icon css">
+            <a href="#habilidades">
+              <span><ion-icon name="stats"></ion-icon></span>
+            </a>
+            <div class="tooltip">Habilidades</div>
+          </div>
+          <div class="icon js">
+            <a href="#experiencia">
+              <span><ion-icon name="briefcase"></ion-icon></span>
+            </a>
+            <div class="tooltip">Experiencia</div>
+          </div>
+          <div class="icon react">
+            <a href="#proyectos">
+              <span><ion-icon name="grid"></ion-icon></span>
+            </a>
+            <div class="tooltip">Proyectos</div>
+          </div>
+          <div class="icon angular">
+            <a href="#contacto">
+              <span><ion-icon name="call"></ion-icon></span>
+            </a>
+            <div class="tooltip">Contacto</div>
+          </div>
+        </div>
+      </div>
+      <!-- FIN MENU 2 -->
       <!-- SECCION 2 -->
       <div id="habilidades" class="habilidades">
-        <div
-          data-aos="fade-up"
-          data-aos-offset="500"
-        >
+        <div data-aos="fade-up" data-aos-offset="500">
           <h3>Conocimientos</h3>
         </div>
         <div data-aos="zoom-in">
@@ -136,55 +176,55 @@
             </p>
           </div>
         </div>
-        <div class="cont-caja">
-          <div data-aos="fade-right">
-            <div class="caja">
-              <h2>Lenguajes de Programación</h2>
-              <ul>
-                <li>C#(WCF) (Intermedio)</li>
-                <li>Python (Básico)</li>
-                <li>Javascript (Básico)</li>
-              </ul>
+        <div class="container">
+          <div class="cont-caja">
+            <div data-aos="flip-up">
+              <div class="caja" id="primer-caja">
+                <h2>Lenguajes de Programación</h2>
+                <ul>
+                  <li>C#(WCF)</li>
+                  <li>Python</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div data-aos="fade-left">
-            <div class="caja">
-              <h2>Lenguajes</h2>
-              <ul>
-                <li>HTML y CSS (Intermedio)</li>
-              </ul>
+            <div data-aos="flip-up">
+              <div class="caja">
+                <h2>Lenguajes</h2>
+                <ul>
+                  <li>HTML y CSS</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div data-aos="fade-right">
-            <div class="caja">
-              <h2>Front-End</h2>
-              <ul>
-                <li>Vue.js (Intermedio)</li>
-              </ul>
+            <div data-aos="flip-up">
+              <div class="caja">
+                <h2>Front-End</h2>
+                <ul>
+                  <li>Vue.js</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div data-aos="fade-left">
-            <div class="caja">
-              <h2>Back-End</h2>
-              <ul>
-                <li>Django (Básico)</li>
-              </ul>
+            <div data-aos="flip-up">
+              <div class="caja">
+                <h2>Back-End</h2>
+                <ul>
+                  <li>Django</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div data-aos="fade-right">
-            <div class="caja">
-              <h2>Base de Datos</h2>
-              <ul>
-                <li>MySQL (Intermedio)</li>
-                <li>Oracle (Intermedio)</li>
-                <li>SQL Server (Intermedio)</li>
-              </ul>
+            <div data-aos="flip-up">
+              <div class="caja">
+                <h2>Base de Datos</h2>
+                <ul>
+                  <li>SQL (Relacional)</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div data-aos="fade-left">
-            <div class="caja">
-              <h2>Idioma Extranjero</h2>
-              <p>Ingles: Intermedio</p>
+            <div data-aos="flip-up">
+              <div class="caja">
+                <h2>Idioma Extranjero</h2>
+                <p>Ingles: Intermedio</p>
+              </div>
             </div>
           </div>
         </div>
@@ -195,9 +235,8 @@
       <!-- FIN SECCION 2 -->
       <!-- SECCION 3 -->
       <div id="experiencia" class="experiencia">
-        <div data-aos="fade-up"
-        data-aos-offset="400">
-        <h3>Experiencia Laboral</h3>
+        <div data-aos="fade-up" data-aos-offset="400">
+          <h3>Experiencia Laboral</h3>
         </div>
         <div class="contenedor">
           <div data-aos="zoom-in">
@@ -207,41 +246,51 @@
               <p>Cargo: Practicante</p>
               <ul>
                 <li>
-                  Front-End: Desarrollo de modulos para la creacion de 
-                  un Sistema Web (Área de Calidad y DevOps) 
-                  consumiendo los endpoints con el Framework 
-                  Vue.js
+                  Front-End: Desarrollo de modulos para la creacion de un
+                  Sistema Web (Área de Calidad y DevOps) consumiendo los
+                  endpoints con el Framework Vue.js
                 </li>
                 <ul>
                   <li>Login</li>
-                  <li>Modulo de reportes de Bamboo: El cual mostraba 
-                    la información de los planes de Bamboo creados 
-                    hasta la fecha y era posible exportarlos a un 
-                    Excel de ser necesario para su manipulación</li>
-                  <li>Modulo de reportes de SonarQube: El cual mostraba 
-                    la información de los proyectos de la empresa, 
-                    tales como categorías, vulnerabilidades, rating, 
-                    bloqueantes, críticos, etc. Todo ello datos 
-                    concernientes a cada proyecto según como necesitasen 
-                    visualizar la información o los datos, también esta 
-                    información es posible exportarla a Excel o CSV.</li>
-                  <li>Modulo de Deploys en Bamboo: El cual mostraba el 
-                    estado de los despliegues de los proyectos en las 
-                    distintas áreas (QA, Desarrollo y Producción) según 
-                    los filtros ingresados, la visualización de la 
-                    información es la siguiente:</li>
-                    <ul>
-                      <li>Año: Según el año o rango de años que se 
-                        desee visualizar.</li>
-                      <li>Estado: El cual puede ser SUCCESS (exitoso) 
-                        o FAILED (fallido).</li>
-                      <li>Total: Muestra la cantidad de total de los 
-                        despliegues separados por fallidos y exitoso 
-                        según corresponda.</li>
-                      <li>Meses: Muestra específicamente en que mes 
-                        del año consultado se encuentra el estado del 
-                        despliegue del proyecto.</li>
-                    </ul>
+                  <li>
+                    Modulo de reportes de Bamboo: El cual mostraba la
+                    información de los planes de Bamboo creados hasta la fecha y
+                    era posible exportarlos a un Excel de ser necesario para su
+                    manipulación
+                  </li>
+                  <li>
+                    Modulo de reportes de SonarQube: El cual mostraba la
+                    información de los proyectos de la empresa, tales como
+                    categorías, vulnerabilidades, rating, bloqueantes, críticos,
+                    etc. Todo ello datos concernientes a cada proyecto según
+                    como necesitasen visualizar la información o los datos,
+                    también esta información es posible exportarla a Excel o
+                    CSV.
+                  </li>
+                  <li>
+                    Modulo de Deploys en Bamboo: El cual mostraba el estado de
+                    los despliegues de los proyectos en las distintas áreas (QA,
+                    Desarrollo y Producción) según los filtros ingresados, la
+                    visualización de la información es la siguiente:
+                  </li>
+                  <ul>
+                    <li>
+                      Año: Según el año o rango de años que se desee visualizar.
+                    </li>
+                    <li>
+                      Estado: El cual puede ser SUCCESS (exitoso) o FAILED
+                      (fallido).
+                    </li>
+                    <li>
+                      Total: Muestra la cantidad de total de los despliegues
+                      separados por fallidos y exitoso según corresponda.
+                    </li>
+                    <li>
+                      Meses: Muestra específicamente en que mes del año
+                      consultado se encuentra el estado del despliegue del
+                      proyecto.
+                    </li>
+                  </ul>
                 </ul>
               </ul>
             </div>
@@ -256,7 +305,10 @@
       <div id="proyectos" class="proyectos">
         <h3>Proyectos</h3>
         <div class="text_info">
-          <p>Aqui hay algunos de los proyectos que he realizado</p>
+          <p>
+            En esta seccion se encuentran algunos de los proyectos que he
+            realizado
+          </p>
         </div>
         <div class="cont-pro">
           <div class="caja-pro"></div>
@@ -290,22 +342,22 @@
     </div>
     <!-- FIN CONTENIDO PAGINA -->
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <!-- LIBRERIAS -->
     <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src="js/animation-staggering-demo.js"></script>
-    <script src="anime.min.js"></script>
+    <script text="text/javascript" src="js/anime.min.js"></script>
+    <!-- FIN LIBRERIAS -->
 
-    <script type="text/javascript">
-      AOS.init({
-        duration: 1000,
-      });
+    <!-- ARCHIVOS JS -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script
+      type="text/javascript"
+      src="js/script_vanilla_tilt_libreria.js"
+    ></script>
+    <script type="text/javascript" src="js/script_aos_libreria.js"></script>
+    <script type="text/javascript" src="js/script_anime_libreria.js"></script>
+    <!-- FIN ARCHIVOS JS -->
 
-      VanillaTilt.init(document.querySelectorAll(".caja"), {
-        max: 25,
-        speed: 400,
-        glare: true,
-      });
-    </script>
+    <script type="text/javascript"></script>
   </body>
 </html>
