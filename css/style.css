@@ -222,7 +222,6 @@ button > div{
   display: none;
 }
 
-
 /* ****************************** INICIO CONTENIDO PAGINA ************************************* */
 /* =============================== SECCION 1 ========================================= */
 /* contenedor principal de la seccion */
@@ -300,7 +299,6 @@ button > div{
 .container {
   display: flex;
   justify-content: center;
-  background-color: brown;
 }
 
 /* contenedor de los items */
@@ -312,7 +310,6 @@ button > div{
   grid-template-columns: repeat(2, minmax(200px, 600px));
   gap: 20px;
   /* padding: 10px; */
-  background-color: aqua;
 }
 
 /* items */
@@ -434,7 +431,7 @@ p {
   /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
    lo que haremos sera usar media querys y al llegar al limite en el que se salen los elementos de la caja
    usar la propiedad height: 100vh auto; */
-  height: 100vh auto;
+  height: auto;
   position: relative;
 }
 
@@ -669,13 +666,65 @@ p {
   .hab-contenedor .fondo {
     font-size: 6rem;
   }
-  /* ======================= FIN SECCION 2 ============================ */
+
   /* al tener X tamaño de pantalla se veran los items en 1 columna */
   .cont-caja {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  /* ocultamos el menu */
+  /* titulo seccion */
+  .titulo h3 {
+    margin-left: 0rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  /* titulo caja */
+  .caja h2 {
+    text-align: center;
+  }
+
+  /* margenes*/
+  .text_info {
+    margin: 0rem 0rem 0rem 0rem;
+  }
+
+  /* ======================= FIN SECCION 2 ============================ */
+
+  /* ========================= SECCION 3 ============================= */
+  .experiencia {
+    height: auto;
+  }
+
+  /* items */
+  .caja_dos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    margin: 0rem 0rem 0rem 0rem;
+  }
+  /* ========================= FIN SECCION 3 ============================= */
+
+  /* contenido de la pagina 1*/
+  #main {
+    transition: margin-left 0.5s;
+    padding: 0rem 1rem 0rem 1rem;
+    margin-right: 0rem;
+  }
+
+  /* menu ver. tablet y monitor*/
   #abrir-menu {
     visibility: hidden;
   }
@@ -693,15 +742,17 @@ p {
     bottom: 2rem;
     z-index: 1;
     border-radius: 50%;
+    background-color: #2196f3;
   }
 
   .wrapper a {
     border-radius: 50%;
+    background-color: #0fc70f;
   }
 
   .wrapper .icon {
     position: relative;
-    margin: 0 20px;
+    margin: 0 7px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -712,7 +763,7 @@ p {
     border-radius: 50%;
   }
 
-  .wrapper .icon:hover a ion-icon{
+  .wrapper .icon:hover a ion-icon {
     color: #fff;
   }
 
@@ -805,13 +856,6 @@ p {
   }
   /* ------------------ fin menu 2 -------------------- */
 
-  /* contenido de la pagina 1*/
-  #main {
-    transition: margin-left 0.5s;
-    padding: 0rem 2rem 0rem 1rem;
-    margin-right: 0rem;
-  }
-
   /* ========================= FIN SECCION 2 ========================== */
 }
 
@@ -844,10 +888,12 @@ p {
     bottom: 2rem;
     z-index: 1;
     border-radius: 50%;
+    background-color: #2196f3;
   }
 
   .wrapper a {
     border-radius: 50%;
+    background-color: #0fc70f;
   }
 
   .wrapper .icon {
@@ -863,7 +909,7 @@ p {
     border-radius: 50%;
   }
 
-  .wrapper .icon:hover a ion-icon{
+  .wrapper .icon:hover a ion-icon {
     color: #fff;
   }
 
