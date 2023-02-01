@@ -1,9 +1,4 @@
-// funcion sleep
-// la funcion espera durante 3seg (3000 ms) para luego proceder
-// a ejecutar la funcion AnimationMoveLetter
 
-
-iniciarSecuencia();
 
 function animationMoveLetter() {
   // bloque de codigo que ejecuta los parametros de la libreria
@@ -19,7 +14,7 @@ function animationMoveLetter() {
   });
 
   tl.add({
-    translateX: 250,
+    translateX: 120,
     // override the easing parameter
     easing: "spring",
   })  
@@ -39,14 +34,14 @@ function animationMoveLetter() {
 
 }
 
-function esperar(){
-    setTimeout(mostrarElemento, 60500);
+function ejecutarAnimacionYEsperar(){
+    setTimeout(mostrarElemento, 58000);
 }
 
 function animacion(){
     ocultarElemento();
     animationMoveLetter();
-    esperar();
+    ejecutarAnimacionYEsperar();
 }
 
 function ocultarElemento(){
@@ -55,10 +50,4 @@ function ocultarElemento(){
 
 function mostrarElemento(){
     document.getElementById('icon-refresh').style.display = 'block';
-}
-
-function iniciarSecuencia(){
-    ocultarElemento();
-    setTimeout(animationMoveLetter, 2000);
-    esperar();
 }
