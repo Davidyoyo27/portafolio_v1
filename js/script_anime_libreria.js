@@ -1,5 +1,3 @@
-
-
 function animationMoveLetter() {
   // bloque de codigo que ejecuta los parametros de la libreria
   let tl = anime.timeline({
@@ -17,7 +15,7 @@ function animationMoveLetter() {
     translateX: 120,
     // override the easing parameter
     easing: "spring",
-  })  
+  })
     .add({
       opacity: 0.5,
       scale: 2,
@@ -31,23 +29,22 @@ function animationMoveLetter() {
       translateX: 0,
       scale: 1,
     });
-
 }
 
-function ejecutarAnimacionYEsperar(){
-    setTimeout(mostrarElemento, 58000);
+function ejecutarAnimacionYEsperar() {
+  setTimeout(mostrarElemento, 72000);
 }
 
-function animacion(){
-    ocultarElemento();
-    animationMoveLetter();
-    ejecutarAnimacionYEsperar();
+function animacion() {
+  ocultarElemento();
+  animationMoveLetter();
+  ejecutarAnimacionYEsperar();
 }
 
-function ocultarElemento(){
-    document.getElementById('icon-refresh').style.display = 'none';
+function ocultarElemento() {
+  document.getElementById("icon-refresh").style.display = "none";
 }
 
-function mostrarElemento(){
-    document.getElementById('icon-refresh').style.display = 'block';
+function mostrarElemento() {
+  document.getElementById("icon-refresh").style.display = "block";
 }

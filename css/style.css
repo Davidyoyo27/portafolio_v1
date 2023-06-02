@@ -214,8 +214,9 @@ body {
 /* texto presentacion del inicio */
 .cont-texto p{
   font-size: 4.5rem;
-  line-height: 50%;
+  line-height: 30%;
   color: #f1f1f1;
+  cursor: default;
 }
 
 /* animacion del texto(por letra) inicial al pasar el mouse por encima */
@@ -328,7 +329,7 @@ p {
 .hab-contenedor .fondo {
   font-size: 10em;
   position: absolute;
-  bottom: 3.7em;
+  bottom: 4.5em;
   opacity: 0.1;
   z-index: -1;
 }
@@ -346,6 +347,7 @@ p {
 .experiencia {
   position: relative;
   cursor: default;
+  height: auto;
 }
 
 /* titulo */
@@ -367,10 +369,11 @@ p {
 
 /* items */
 .caja_dos {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 /* contenedor texto fondo */
@@ -420,7 +423,7 @@ p {
 
 /* items */
 .caja-pro {
-  background: salmon;
+  background: rgb(243, 124, 110);
   width: 20rem;
   height: 20rem;
   transition: 0.3s;
@@ -649,7 +652,7 @@ p {
 
 /* ================================================================================================= */
 /* ===================================== MEDIA QUERYS ============================================== */
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
 
   /* contenido de la pagina 1*/
   #main {
@@ -681,7 +684,6 @@ p {
 
   .wrapper a {
     border-radius: 50%;
-    background-color: #0fc70f;
   }
 
   .wrapper .icon {
@@ -770,7 +772,6 @@ p {
   }
   
   .cont-texto p{
-    background-color: #0fc70f;
     font-size: 9vw;
     line-height: 50%;
     color: #f1f1f1;
@@ -849,7 +850,7 @@ p {
   /* ========================= FIN SECCION 4 ============================= */
 }
 
-@media screen and (min-width: 767px) and (max-width: 1023px) {
+@media (min-width: 767px) and (max-width: 1023px) {
 
   /* ================== SECCION 1 ====================== */
   .presentacion{
@@ -873,7 +874,6 @@ p {
   }
   
   .cont-texto p{
-    background-color: #0fc70f;
     font-size: 8vw;
     line-height: 50%;
     color: #f1f1f1;
@@ -996,7 +996,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   
   /* ==================== SECCION 2 ========================== */
   .caja{
