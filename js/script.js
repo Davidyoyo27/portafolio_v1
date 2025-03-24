@@ -8,6 +8,7 @@ function abrirNav() {
     document.getElementById("abrir-menu").style.display = 'none';
   }
 }
+
 // funcion para cerrar el menu
 function cerrarNav() {
   let cerrar_menu_lateral = document.getElementById("mySidenav").style.width = "0";
@@ -18,7 +19,6 @@ function cerrarNav() {
     document.getElementById("abrir-menu").style.display = 'block';
   }
 }
-
 
 // permite acceder a las opciones del menu
 const listItems = document.querySelectorAll('.list-item');
