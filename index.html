@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- IONICONS SCRIPTS -->
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <!-- FIN IONICONS SCRIPTS -->
     <title>Portafolio -- David Carrasco</title>
   </head>
   <body>
@@ -76,7 +80,7 @@
       <div id="inicio" class="presentacion">
         <!-- ICONO ACTUALIZAR ANIMACION -->
         <div id="icon-refresh">
-          <ion-icon name="refresh" onclick="animacion();"></ion-icon>
+          <ion-icon id="btn_play" name="refresh" onclick="playAnimation()"></ion-icon>
         </div>
         <!-- FIN ICONO ACTUALIZAR ANIMACION -->
         <div class="cont-texto">
@@ -132,6 +136,9 @@
             </div>
           </h2>
         </div>
+        <div class="ini-contenedor">
+          <h1 class="fondo">Inicio</h1>
+        </div>
       </div>
       <!-- FIN SECCION 1 -->
       <!-- MENU 2 -->
@@ -167,7 +174,7 @@
       <!-- FIN MENU 2 -->
       <!-- SECCION 2 -->
       <div id="habilidades" class="habilidades">
-        <div data-aos="fade-up" data-aos-offset="200">
+        <div data-aos="fade-up" data-aos-offset="300">
           <div class="titulo">
             <h3>Conocimientos</h3>
           </div>
@@ -183,9 +190,14 @@
             </p>
           </div>
         </div>
+        <!-- NOTA: Si al minimizar el tamaño de la pantalla notas que se añade como un extra de margen que se vee en el scroll horizontal 
+         es por el "data-aos" que tiene cada una de las cajas con texto, con la animacion que sale de los costados para ser mas exacto, es 
+         por esta animacion ya que cuando no se vee la caja esta esta oculta en los costados generando ese margen extra, para comprobar esto 
+         puedes bajar hasta que sean completamente visible todas las cajas y ahi notaras que el scrollbar horizontal desaparece. 
+         Para solucionar esto puedes cambiar el tipo de animacion de transicion que tiene o quitarsela -->
         <div class="container">
           <div class="cont-caja">
-            <div data-aos="flip-up">
+            <div data-aos="fade-right">
               <div class="caja" id="primer-caja">
                 <h2>Lenguajes de Programación</h2>
                 <ul>
@@ -195,7 +207,7 @@
                 </ul>
               </div>
             </div>
-            <div data-aos="flip-up">
+            <div data-aos="fade-left">
               <div class="caja">
                 <h2>Lenguajes/Bibliotecas</h2>
                 <ul>
@@ -205,7 +217,7 @@
                 </ul>
               </div>
             </div>
-            <div data-aos="flip-up">
+            <div data-aos="fade-right">
               <div class="caja">
                 <h2>Front-End</h2>
                 <ul>
@@ -213,7 +225,7 @@
                 </ul>
               </div>
             </div>
-            <div data-aos="flip-up">
+            <div data-aos="fade-left">
               <div class="caja">
                 <h2>Back-End</h2>
                 <ul>
@@ -223,7 +235,7 @@
                 </ul>
               </div>
             </div>
-            <div data-aos="flip-up">
+            <div data-aos="fade-right">
               <div class="caja">
                 <h2>Base de Datos</h2>
                 <ul>
@@ -235,13 +247,13 @@
                 </ul>
               </div>
             </div>
-            <div data-aos="flip-up">
+            <div data-aos="fade-left">
               <div class="caja">
                 <h2>Control de Versiones</h2>
                 <p>Git</p>
               </div>
             </div>
-            <div data-aos="flip-up">
+            <div data-aos="fade-right">
               <div class="caja">
                 <h2>Idioma Extranjero</h2>
                 <p>Ingles: B2</p>
@@ -493,10 +505,7 @@
 
     <!-- ARCHIVOS JS -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script
-      type="text/javascript"
-      src="js/script_vanilla_tilt_libreria.js"
-    ></script>
+    <script type="text/javascript" src="js/script_vanilla_tilt_libreria.js"></script>
     <script type="text/javascript" src="js/script_aos_libreria.js"></script>
     <script type="text/javascript" src="js/script_anime_libreria.js"></script>
     <!-- FIN ARCHIVOS JS -->

@@ -16,7 +16,12 @@ body {
   /* background: #1a1d29; */
   padding: 0;
   margin: 0;
+  width: auto;
+  overflow-x: hidden;
 }
+
+/* VER SI QUITAS EL HOVER DE LAS LETRAS EN EL INICIO DE LA PAGINA O SI LE CAMBIAS ALGO PARA QUE NO SE PIFEE EL HOVER AL MOMENTO EN QUE
+LA ANIMACION ESTA ACTIVA */
 
 /* menu lateral */
 .sidenav {
@@ -197,9 +202,22 @@ body {
   position: relative;
 }
 
+.ini-contenedor .fondo {
+  position: absolute;
+  font-size: 10em;
+  bottom: 0;
+  right: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
 .cont-texto div{
   display: flex;
   height: 23%;
+}
+
+#btn_play{
+  font-size: 1rem;
 }
 
 .cont-texto div h2{
@@ -222,12 +240,12 @@ body {
 }
 
 /* animacion del texto(por letra) inicial al pasar el mouse por encima */
-.ini_text p:hover {
+/* .ini_text p:hover {
   color: aqua;
   transition: 0.5s;
   animation: anim-moveLetter 0.8s ease-in;
   animation-iteration-count: 1;
-}
+} */
 
 /* contenedor del icono de iniciar la animacion */
 #icon-refresh {
@@ -422,7 +440,6 @@ p {
 
 /* items */
 .caja-pro {
-  /* background: rgb(243, 124, 110); */
   background: rgb(18, 21, 62);
   display: flex;
   justify-content: center;
@@ -694,9 +711,9 @@ p {
     background-color: #e7eaf6;
     position: fixed;
     bottom: 2rem;
-    z-index: 1;
     border-radius: 50%;
     background-color: #2196f3;
+    z-index: 1;
   }
 
   .wrapper a {
@@ -925,7 +942,8 @@ p {
     bottom: 2rem;
     z-index: 1;
     border-radius: 50%;
-    background-color: #2196f3;
+    /* background-color: #2196f3; */
+    background-color: #0a165c;
   }
 
   .wrapper a {
