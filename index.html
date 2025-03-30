@@ -7,11 +7,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- IONICONS SCRIPTS -->
+    <!-- primera version usada de ionicos en el portafolio -->
     <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
     <!-- FIN IONICONS SCRIPTS -->
     <title>Portafolio -- David Carrasco</title>
+    <link rel="icon" href="images/laptop-code-solid-lightgreen.svg" type="image/x-icon">
   </head>
   <body>
     <!-- MENU LATERAL -->
@@ -21,6 +24,8 @@
       <!-- FIN ICONO -->
       <div class="menu">
         <ul>
+          <!-- NOTA: si al ver que no aparecen algun icono cuando lo subes a produccion, verifica si la version de ionicon
+           que usas calza con el nombre del icono, porque cuando el icono no se ve puede ser por esta razon -->
           <a href="#inicio">
             <li class="list-item active" style="--color: #f44336">
               <span class="icon">
@@ -32,7 +37,7 @@
           <a href="#habilidades">
             <li class="list-item" style="--color: #ffa117">
               <span class="icon">
-                <ion-icon name="stats"></ion-icon>
+                <ion-icon name="stats-chart-sharp"></ion-icon>
               </span>
               <span class="text">Habilidades</span>
             </li>
@@ -48,7 +53,7 @@
           <a href="#proyectos">
             <li class="list-item" style="--color: #2196f3">
               <span class="icon">
-                <ion-icon name="grid"></ion-icon>
+                <ion-icon name="grid-sharp"></ion-icon>
               </span>
               <span class="text">Proyectos</span>
             </li>
@@ -56,7 +61,7 @@
           <a href="#contacto">
             <li class="list-item" style="--color: #b145e9">
               <span class="icon">
-                <ion-icon name="call"></ion-icon>
+                <ion-icon name="call-sharp"></ion-icon>
               </span>
               <span class="text">Contacto</span>
             </li>
