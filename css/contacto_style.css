@@ -1,0 +1,54 @@
+/* ================================== SECCION 5 ========================================= */
+/* contenedor principal de la seccion */
+.contacto {
+    height: 100vh;
+    position: relative;
+}
+
+/* titulo, contenido y link */
+.contacto h3,
+.cont-contacto,
+.cont-contacto a {
+    color: #fff;
+}
+
+/* titulo */
+.contacto h3 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* contenedor */
+.cont-contacto {
+    text-align: center;
+}
+
+/* icono linkedin */
+.cont-contacto ion-icon {
+    font-size: 50px;
+}
+
+.cont-contacto ion-icon:hover {
+    color: #818181;
+}
+
+.cont-contacto p:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+/* contenedor texto fondo */
+.cont-contenedor {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* texto de fondo de la seccion */
+.cont-contenedor .fondo {
+    font-size: 10vw;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.1;
+}
+
+/* =============================== FIN SECCION 5 ========================================= */

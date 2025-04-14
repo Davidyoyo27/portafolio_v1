@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general_styles.css" />
+    <link rel="stylesheet" href="css/inicio_style.css" />
+    <link rel="stylesheet" href="css/menu_mobile_styles.css" />
+    <link rel="stylesheet" href="css/habilidades_style.css" />
+    <link rel="stylesheet" href="css/experiencia_style.css" />
+    <link rel="stylesheet" href="css/proyectos_style.css" />
+    <link rel="stylesheet" href="css/contacto_style.css" />
     <!-- IONICONS SCRIPTS -->
     <!-- primera version usada de ionicos en el portafolio -->
     <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
@@ -14,7 +20,7 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
     <!-- FIN IONICONS SCRIPTS -->
     <title>Portafolio -- David Carrasco</title>
-    <link rel="icon" href="images/laptop-code-solid-lightgreen.svg" type="image/x-icon">
+    <link rel="icon" href="images/laptop-code-solid-lightgreen.svg" type="image/x-icon"/>
   </head>
   <body>
     <!-- MENU LATERAL -->
@@ -84,11 +90,11 @@
       <!-- SECCION 1 -->
       <div id="inicio" class="presentacion">
         <!-- ICONO ACTUALIZAR ANIMACION -->
-        <div id="icon-refresh">
-          <ion-icon id="btn_play" name="refresh" onclick="playAnimation()"></ion-icon>
-        </div>
         <!-- FIN ICONO ACTUALIZAR ANIMACION -->
         <div class="cont-texto">
+          <div id="icon-refresh">
+            <ion-icon id="btn_play" name="refresh" onclick="playAnimation()"></ion-icon>
+          </div>
           <h2 class="text_shadows">
             <div class="ini_text">
               <p>H</p>
@@ -123,20 +129,11 @@
               <p>d</p>
               <p>o</p>
               <p>r</p>
-              <p>&nbsp;</p>
             </div>
             <div class="ini_text">
-              <p>d</p>
+              <p>W</p>
               <p>e</p>
-              <p>&nbsp;</p>
-              <p>S</p>
-              <p>o</p>
-              <p>f</p>
-              <p>t</p>
-              <p>w</p>
-              <p>a</p>
-              <p>r</p>
-              <p>e</p>
+              <p>b</p>
               <p>.</p>
             </div>
           </h2>
@@ -156,7 +153,7 @@
           </div>
           <div class="icon hab">
             <a href="#habilidades">
-              <span><ion-icon name="stats"></ion-icon></span>
+              <span><ion-icon name="stats-chart-sharp"></ion-icon></span>
             </a>
           </div>
           <div class="icon exp">
@@ -187,11 +184,11 @@
         <div data-aos="zoom-in">
           <div class="text_info">
             <p>
-              Soy Ingeniero en Informática y me interesa mucho el Desarrollo
-              Web, actualmente resido en Santiago, Chile. Este portafolio fue
-              desarrollado utilizando unicamente HTML, CSS puro (Flexbox y Grid) y
-              JavaScript, aquí también podrás ver los conocimientos que poseo
-              actualmente.
+              Soy Ingeniero en Informática y Desarrollador de Web, mis
+              conocimientos y experiencia estan distribuidos tanto en FrontEnd
+              como en BackEnd. Este portafolio fue desarrollado utilizando
+              unicamente HTML, CSS puro (Flexbox-Grid) y JavaScript, aquí
+              también podrás ver los conocimientos que poseo actualmente.
             </p>
           </div>
         </div>
@@ -203,7 +200,7 @@
         <div class="container">
           <div class="cont-caja">
             <div data-aos="fade-right">
-              <div class="caja" id="primer-caja">
+              <div class="caja" > <!-- id="primer-caja" -->
                 <h2>Lenguajes de Programación</h2>
                 <ul>
                   <li>Javascript</li>
@@ -246,7 +243,7 @@
                 <ul>
                   <li>DB2</li>
                   <li>Oracle (PL/SQL)</li>
-                  <li>SQL Server</li>
+                  <li>SQL Server (PL/SQL)</li>
                   <li>PostgreSQL</li>
                   <li>MySQL</li>
                 </ul>
@@ -286,30 +283,33 @@
             <div class="caja_dos">
               <b>Oct. 2023 - Agos. 2024</b>
               <p>Empresa: Gather Consultores</p>
-              <p>Cargo: Desarrollador Backend - Desarrollador de Bases de Datos</p>
+              <p>
+                Cargo: Desarrollador Backend - Desarrollador de Bases de Datos
+              </p>
               <p>Stack: DB2 - SQL Server - PostgreSQL</p>
               <ul>
                 <li>
                   Manejo de Bases de Datos como DB2, SQL Server y PostgreSQL.
                 </li>
                 <li>
-                  Revision de Querys dentro de los entornos de Test y Producción para uno de los sistemas de la empresa.
+                  Revision de Querys dentro de los entornos de Test y Producción
+                  para uno de los sistemas de la empresa.
                 </li>
                 <li>
                   Inserción, modificación y eliminación de datos en producción.
                   <!-- ... de datos en los distintos entornos de desarrollo. -->
                 </li>
+                <li>Modificacion de SPs y logica.</li>
                 <li>
-                  Modificacion de SPs y logica.
+                  Migre código de DB2 a SQL Server, adaptando sintaxis y
+                  funcionalidades, ademas validé la integridad de los datos
+                  post-migración.
                 </li>
+                <li>Paso a produccion de nuevos SPs de uno de los sistemas.</li>
                 <li>
-                  Migre código de DB2 a SQL Server, adaptando sintaxis y funcionalidades, ademas validé la integridad de los datos post-migración.
-                </li>
-                <li>
-                  Paso a produccion de nuevos SPs de uno de los sistemas.
-                </li>
-                <li>
-                  Realice carga de datos de tablas mediante ETL (pentaho), y en caso que estas presentaran algun problema o error en su carga se realizo la revision correspondiente.
+                  Realice carga de datos de tablas mediante ETL (pentaho), y en
+                  caso que estas presentaran algun problema o error en su carga
+                  se realizo la revision correspondiente.
                 </li>
               </ul>
             </div>
@@ -398,20 +398,20 @@
               </p>
               <ul>
                 <li>
-                  Back-End: Durante mi proyecto de desarrollo de Portafolio de Título, tuve
-                  la oportunidad de trabajar en una solución integral para una
-                  empresa de turismo y arriendos. El objetivo principal del
-                  proyecto fue desarrollar una aplicación administrativa de
-                  escritorio utilizando el lenguaje C#, junto con una
-                  aplicación web basada en Python Django. Estas dos aplicaciones
-                  se comunicaban entre sí y estaban conectadas a una base de
-                  datos Oracle. En la aplicación administrativa de escritorio,
-                  utilicé C# y Windows Forms para crear una interfaz intuitiva y
-                  fácil de usar, que permitía a los usuarios gestionar y
-                  administrar eficientemente las operaciones de la empresa de
-                  turismo y arriendos. Implementé funcionalidades clave, como la
-                  gestión de reservas, la administración de inventario y la
-                  generación de informes.
+                  Back-End: Durante mi proyecto de desarrollo de Portafolio de
+                  Título, tuve la oportunidad de trabajar en una solución
+                  integral para una empresa de turismo y arriendos. El objetivo
+                  principal del proyecto fue desarrollar una aplicación
+                  administrativa de escritorio utilizando el lenguaje C#, junto
+                  con una aplicación web basada en Python Django. Estas dos
+                  aplicaciones se comunicaban entre sí y estaban conectadas a
+                  una base de datos Oracle. En la aplicación administrativa de
+                  escritorio, utilicé C# y Windows Forms para crear una interfaz
+                  intuitiva y fácil de usar, que permitía a los usuarios
+                  gestionar y administrar eficientemente las operaciones de la
+                  empresa de turismo y arriendos. Implementé funcionalidades
+                  clave, como la gestión de reservas, la administración de
+                  inventario y la generación de informes.
                 </li>
                 <p>
                   A continuacion se nombran los modulos realizados del sistema:
@@ -420,12 +420,24 @@
                   <li>Realizar un mantenedor de registro de clientes.</li>
                   <li>Realizar un mantenedor de registro de departamentos.</li>
                   <li>Realizar un inventario por departamento.</li>
-                  <li>Realizar función de programación de mantenciones para los departamentos.</li>
-                  <li>Realizar un mantenedor para servicios extra y la contratación de estos.</li>
-                  <li>Mantener actualizado en todo momento el estado de los departamentos.</li>
-                  <li>Realizar la documentación completa del proyecto, incluyendo manuales de
-                    usuario y documentación técnica, para asegurar una comprensión clara y una
-                    fácil mantenibilidad del sistema.</li>
+                  <li>
+                    Realizar función de programación de mantenciones para los
+                    departamentos.
+                  </li>
+                  <li>
+                    Realizar un mantenedor para servicios extra y la
+                    contratación de estos.
+                  </li>
+                  <li>
+                    Mantener actualizado en todo momento el estado de los
+                    departamentos.
+                  </li>
+                  <li>
+                    Realizar la documentación completa del proyecto, incluyendo
+                    manuales de usuario y documentación técnica, para asegurar
+                    una comprensión clara y una fácil mantenibilidad del
+                    sistema.
+                  </li>
                 </ul>
               </ul>
             </div>
@@ -452,7 +464,10 @@
           <div class="cont-pro">
             <div class="caja-pro">
               <a href="https://netfllix-clon.netlify.app" target="_blank">
-                <img src="images/netflix-logo-_1_.webp" alt="imagen portada del proyecto">
+                <img
+                  src="images/netflix-logo-_1_.webp"
+                  alt="imagen portada del proyecto"
+                />
               </a>
             </div>
             <div class="caja-pro">
@@ -510,7 +525,10 @@
 
     <!-- ARCHIVOS JS -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/script_vanilla_tilt_libreria.js"></script>
+    <script
+      type="text/javascript"
+      src="js/script_vanilla_tilt_libreria.js"
+    ></script>
     <script type="text/javascript" src="js/script_aos_libreria.js"></script>
     <script type="text/javascript" src="js/script_anime_libreria.js"></script>
     <!-- FIN ARCHIVOS JS -->

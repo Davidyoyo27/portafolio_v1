@@ -22,7 +22,7 @@ let animationData = anime.timeline({
 });
 
 animationData.add({
-  translateX: 120,
+  translateX: 85,
   // override the easing parameter
   easing: "spring",
 })

@@ -1,0 +1,81 @@
+/* =============================== SECCION 4 ========================================= */
+/* contenedor principal de la seccion */
+.proyectos {
+    /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
+     lo que haremos sera usar media querys y al llegar al limite en el que se salen los elementos de la caja
+     usar la propiedad height: 100vh auto; */
+    /* height: auto; */
+    position: relative;
+    cursor: default;
+}
+
+/* titulo */
+.proyectos h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* contenedor */
+.cont-pro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+/* items */
+.caja-pro {
+    background: rgb(18, 21, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 16rem;
+    transition: 0.3s;
+}
+
+.caja-pro img {
+    width: 100%;
+    height: 100%;
+}
+
+.caja-pro a {
+    display: block;
+    height: 100%;
+}
+
+.caja-pro label {
+    color: #ffff;
+}
+
+/* contenedor texto fondo */
+.pro-contenedor {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* texto de fondo de la seccion */
+.pro-contenedor .fondo {
+    font-size: 10vw;
+    opacity: 0.1;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* hover para los items */
+.cont-pro:hover> :not(:hover) {
+    opacity: 0.4;
+}
+
+/* =============================== FIN SECCION 4 ========================================= */
+
+@media (max-width: 767px) {
+    /* =========================== SECCION 4 =============================== */
+  .cont-pro {
+    height: auto;
+  }
+  /* ========================= FIN SECCION 4 ============================= */
+}

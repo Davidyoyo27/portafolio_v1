@@ -1,0 +1,134 @@
+/* =============================== SECCION 2 ========================================= */
+/* contenedor principal de la seccion */
+.habilidades {
+    height: 100vh auto;
+    position: relative;
+    cursor: default;
+    margin-bottom: 7rem;
+    padding-top: 1rem;
+}
+
+/* titulo */
+.habilidades h3 {
+    margin-left: 1rem;
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* margenes del texto informativo bajo el titulo*/
+.text_info {
+    margin: 0rem 15rem 0rem 15rem;
+}
+
+/* texto de presentacion y contenido de la seccion */
+.text_info p {
+    padding: 1rem 0rem 1rem 0rem;
+    color: #fff;
+}
+
+/* contenedor del .cont-caja para centrarlo */
+.container {
+    display: grid;
+    place-content: center;
+}
+
+/* contenedor de los items */
+.cont-caja {
+    display: grid;
+    /* propiedad que permite el auto ajuste del ancho de los items segun el tamaño
+      de la pantalla */
+    grid-template-columns: repeat(2, minmax(200px, 600px));
+    gap: 1.3rem;
+}
+
+/* items */
+.caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #464b5f;
+    color: #fff;
+    box-shadow: 2.8px 3.6px 2.2px rgba(0, 0, 0, 0.092),
+        6.7px 8.6px 5.3px rgba(0, 0, 0, 0.126),
+        12.5px 16.3px 10px rgba(0, 0, 0, 0.149),
+        22.3px 29px 17.9px rgba(0, 0, 0, 0.166),
+        41.8px 54.3px 33.4px rgba(0, 0, 0, 0.183),
+        100px 130px 80px rgba(0, 0, 0, 0.21);
+    min-height: 12rem;
+}
+
+/* hover con z-index: 1; a la caja de los elementos para que al momento de generar el 
+    movimiento con la libreria de vanilla-tilt este no presente problemas con el movimiento 
+    por el fondo de la seccion que dice "Habilidades", ya que al superponerse el texto 
+    por encima de los items, al momento de mover el mouse donde hubiera texto este impedia 
+    su correcto funcionamiento  */
+.caja:hover {
+    z-index: 1;
+    transform-style: preserve-3d;
+}
+
+/* al momento de colocar el mouse en la caja los elementos h2, ul y p sobresalen dando
+    un aspecto de 3D al momento de mover el mouse por el elemento con la clase "caja", 
+    para esto se necesita 2 propiedades, "transform-style: preserve-3d;" y "transform: translateZ(80px);" */
+.caja:hover h2,
+ul,
+p {
+    transform: translateZ(80px);
+}
+
+/* texto de fondo de seccion */
+.hab-contenedor .fondo {
+    font-size: 10em;
+    position: absolute;
+    bottom: 4.5em;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* texto de fondo de la seccion */
+.hab-contenedor {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* =============================== FIN SECCION 2====================================== */
+
+@media (max-width: 767px) {
+    /* ========================= SECCION 2 ============================ */
+    /* texto de fondo */
+    .hab-contenedor .fondo {
+        font-size: 1rem;
+    }
+
+    /* al tener X tamaño de pantalla se veran los items en 1 columna */
+    .cont-caja {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* titulo seccion */
+    .titulo h3 {
+        margin-left: 0rem;
+        font-size: 2.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    /* titulo caja */
+    /* .caja h2 {
+        text-align: center;
+    } */
+
+    /* margenes*/
+    .text_info {
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    /* ======================= FIN SECCION 2 ============================ */
+}
+
+@media (min-width: 1024px) {
+    /* ==================== SECCION 2 ========================== */
+    .caja {
+        /* text-align: center; */
+    }
+    /* ================== FIN SECCION 2 ======================== */
+}

@@ -1,0 +1,166 @@
+@media (max-width: 767px) {
+    .cont-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper {
+        display: inline-flex;
+        background-color: #e7eaf6;
+        position: fixed;
+        bottom: 2rem;
+        border-radius: 50%;
+        background-color: #0a165c;
+        z-index: 1;
+    }
+
+    .wrapper a {
+        border-radius: 50%;
+    }
+
+    .wrapper .icon {
+        position: relative;
+        margin: 0 7px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 3;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        border-radius: 50%;
+    }
+
+    .wrapper .icon:hover a ion-icon {
+        color: #fff;
+    }
+
+    .wrapper .icon span {
+        position: relative;
+        z-index: 3;
+        height: 60px;
+        width: 60px;
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .wrapper .icon span ion-icon {
+        position: absolute;
+        font-size: 35px;
+        line-height: 60px;
+        right: 12px;
+        top: 10px;
+        color: #000000;
+    }
+
+    .wrapper .icon:hover span {
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .wrapper .inicio:hover span {
+        background: #f44336;
+    }
+
+    .wrapper .hab:hover span {
+        background: #ffa117;
+    }
+
+    .wrapper .exp:hover span {
+        background: #0fc70f;
+    }
+
+    .wrapper .proyect:hover span {
+        background: #2196f3;
+    }
+
+    .wrapper .contact:hover span {
+        background: #b145e9;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cont-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper {
+        display: inline-flex;
+        background-color: #e7eaf6;
+        position: fixed;
+        bottom: 2rem;
+        z-index: 1;
+        border-radius: 50%;
+        background-color: #0a165c;
+    }
+
+    .wrapper a {
+        border-radius: 50%;
+        background-color: #0fc70f;
+    }
+
+    .wrapper .icon {
+        position: relative;
+        margin: 0 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 3;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        border-radius: 50%;
+    }
+
+    .wrapper .icon:hover a ion-icon {
+        color: #fff;
+    }
+
+    .wrapper .icon span {
+        position: relative;
+        z-index: 3;
+        height: 60px;
+        width: 60px;
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .wrapper .icon span ion-icon {
+        position: absolute;
+        font-size: 35px;
+        line-height: 60px;
+        right: 12px;
+        top: 10px;
+        color: #000000;
+    }
+
+    .wrapper .icon:hover span {
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .wrapper .inicio:hover span {
+        background: #f44336;
+    }
+
+    .wrapper .hab:hover span {
+        background: #ffa117;
+    }
+
+    .wrapper .exp:hover span {
+        background: #0fc70f;
+    }
+
+    .wrapper .proyect:hover span {
+        background: #2196f3;
+    }
+
+    .wrapper .contact:hover span {
+        background: #b145e9;
+    }
+}

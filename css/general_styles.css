@@ -20,9 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-/* VER SI QUITAS EL HOVER DE LAS LETRAS EN EL INICIO DE LA PAGINA O SI LE CAMBIAS ALGO PARA QUE NO SE PIFEE EL HOVER AL MOMENTO EN QUE
-LA ANIMACION ESTA ACTIVA */
-
 /* menu lateral */
 .sidenav {
   height: 100%;
@@ -192,429 +189,24 @@ LA ANIMACION ESTA ACTIVA */
 
 /* ****************************** INICIO CONTENIDO PAGINA ************************************* */
 /* =============================== SECCION 1 ========================================= */
-/* contenedor principal de la seccion */
-.presentacion{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: 3s anim-lineUp ease-out;
-  position: relative;
-}
-
-.ini-contenedor .fondo {
-  position: absolute;
-  font-size: 10em;
-  bottom: 0;
-  right: 0;
-  opacity: 0.1;
-  z-index: -1;
-}
-
-.cont-texto div{
-  display: flex;
-  height: 23%;
-}
-
-#btn_play{
-  font-size: 1rem;
-}
-
-.cont-texto div h2{
-  display: flex;
-  font-size: 7em;
-}
-
-.cont-texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* texto presentacion del inicio */
-.cont-texto p{
-  font-size: 4.5rem;
-  line-height: 30%;
-  color: #f1f1f1;
-  cursor: default;
-}
-
-/* animacion del texto(por letra) inicial al pasar el mouse por encima */
-/* .ini_text p:hover {
-  color: aqua;
-  transition: 0.5s;
-  animation: anim-moveLetter 0.8s ease-in;
-  animation-iteration-count: 1;
-} */
-
-/* contenedor del icono de iniciar la animacion */
-#icon-refresh {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* icono de actualizar */
-#icon-refresh ion-icon {
-  color: #fff;
-  font-size: 4rem;
-  position: absolute;
-  right: 7rem;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
 /* =============================== FIN SECCION 1 ===================================== */
 
 /* =============================== SECCION 2 ========================================= */
-/* contenedor principal de la seccion */
-.habilidades {
-  height: 100vh auto;
-  position: relative;
-  cursor: default;
-  margin-bottom: 7rem;
-  padding-top: 1rem;
-}
-
-/* titulo */
-.habilidades h3 {
-  margin-left: 1rem;
-  font-size: 3rem;
-  color: #fff;
-}
-
-/* margenes*/
-.text_info {
-  margin: 0rem 2rem 0rem 2rem;
-}
-
-/* texto de presentacion y contenido de la seccion */
-.text_info p {
-  padding: 1rem 0rem 1rem 0rem;
-  color: #fff;
-}
-
-/* contenedor del .cont-caja para centrarlo */
-.container {
-  display: grid;
-  place-content: center;
-}
-
-/* contenedor de los items */
-.cont-caja {
-  display: grid;
-  /* propiedad que permite el auto ajuste del ancho de los items segun el tamaño
-    de la pantalla */
-  grid-template-columns: repeat(2, minmax(200px, 600px));
-  gap: 1.3rem;
-}
-
-/* items */
-.caja {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #464b5f;
-  color: #fff;
-  box-shadow: 2.8px 3.6px 2.2px rgba(0, 0, 0, 0.092),
-    6.7px 8.6px 5.3px rgba(0, 0, 0, 0.126),
-    12.5px 16.3px 10px rgba(0, 0, 0, 0.149),
-    22.3px 29px 17.9px rgba(0, 0, 0, 0.166),
-    41.8px 54.3px 33.4px rgba(0, 0, 0, 0.183),
-    100px 130px 80px rgba(0, 0, 0, 0.21);
-  min-height: 12rem;
-}
-
-/* hover con z-index: 1; a la caja de los elementos para que al momento de generar el 
-  movimiento con la libreria de vanilla-tilt este no presente problemas con el movimiento 
-  por el fondo de la seccion que dice "Habilidades", ya que al superponerse el texto 
-  por encima de los items, al momento de mover el mouse donde hubiera texto este impedia 
-  su correcto funcionamiento  */
-.caja:hover {
-  z-index: 1;
-  transform-style: preserve-3d;
-}
-
-/* al momento de colocar el mouse en la caja los elementos h2, ul y p sobresalen dando
-  un aspecto de 3D al momento de mover el mouse por el elemento con la clase "caja", 
-  para esto se necesita 2 propiedades, "transform-style: preserve-3d;" y "transform: translateZ(80px);" */
-.caja:hover h2,
-ul,
-p {
-  transform: translateZ(80px);
-}
-
-/* texto de fondo de seccion */
-.hab-contenedor .fondo {
-  font-size: 10em;
-  position: absolute;
-  bottom: 4.5em;
-  opacity: 0.1;
-  z-index: -1;
-}
-
-/* texto de fondo de la seccion */
-.hab-contenedor {
-  display: flex;
-  justify-content: flex-end;
-}
-
 /* =============================== FIN SECCION 2====================================== */
 
 /* =============================== SECCION 3 ========================================= */
-/* contenedor principal de la seccion */
-.experiencia {
-  position: relative;
-  cursor: default;
-  height: auto;
-}
-
-/* titulo */
-.experiencia h3 {
-  text-align: center;
-  font-size: 3rem;
-  color: #fff;
-}
-
-.contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  color: #fff;
-  margin: 0rem 2rem 0rem 2rem;
-}
-
-/* items */
-.caja_dos {
-  /* height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-/* contenedor texto fondo */
-.exp-contenedor {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* texto de fondo de la seccion */
-.exp-contenedor .fondo {
-  font-size: 10vw;
-  opacity: 0.1;
-  position: absolute;
-  /* establecemos con el bottom el 0 (cero) para que su posicion este dentro del margen
-   del contenedor experiencia */
-  /* bottom: 0; */
-}
 /* =============================== FIN SECCION 3 ========================================= */
 
 /* =============================== SECCION 4 ========================================= */
-/* contenedor principal de la seccion */
-.proyectos {
-  /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
-   lo que haremos sera usar media querys y al llegar al limite en el que se salen los elementos de la caja
-   usar la propiedad height: 100vh auto; */
-  /* height: auto; */
-  position: relative;
-  cursor: default;
-}
-
-/* titulo */
-.proyectos h3 {
-  font-size: 3rem;
-  color: #fff;
-}
-
-/* contenedor */
-.cont-pro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 2rem 0rem 2rem 0rem;
-}
-
-/* items */
-.caja-pro {
-  background: rgb(18, 21, 62);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20rem;
-  height: 16rem;
-  transition: 0.3s;
-}
-
-.caja-pro img {
-  width: 100%;
-  height: 100%;
-}
-
-.caja-pro a{
-  display: block;
-  height: 100%;
-}
-
-.caja-pro label{
-  color: #ffff;
-}
-
-/* contenedor texto fondo */
-.pro-contenedor {
-  display: flex;
-  align-items: flex-start;
-}
-
-/* texto de fondo de la seccion */
-.pro-contenedor .fondo {
-  font-size: 10vw;
-  opacity: 0.1;
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
-}
-
-/* hover para los items */
-.cont-pro:hover > :not(:hover) {
-  opacity: 0.4;
-}
-
-
 /* =============================== FIN SECCION 4 ========================================= */
 
 /* ================================== SECCION 5 ========================================= */
-/* contenedor principal de la seccion */
-.contacto {
-  height: 100vh;
-  position: relative;
-}
-
-/* titulo, contenido y link */
-.contacto h3,
-.cont-contacto,
-.cont-contacto a {
-  color: #fff;
-}
-
-/* titulo */
-.contacto h3 {
-  text-align: center;
-  font-size: 3rem;
-}
-
-/* contenedor */
-.cont-contacto {
-  text-align: center;
-}
-
-/* icono linkedin */
-.cont-contacto ion-icon {
-  font-size: 50px;
-}
-
-.cont-contacto ion-icon:hover {
-  color: #818181;
-}
-
-.cont-contacto p:nth-child(2) {
-  display: flex;
-  justify-content: center;
-}
-
-/* contenedor texto fondo */
-.cont-contenedor {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* texto de fondo de la seccion */
-.cont-contenedor .fondo {
-  font-size: 10vw;
-  position: absolute;
-  bottom: 0;
-  opacity: 0.1;
-}
-
 /* =============================== FIN SECCION 5 ========================================= */
 /* ******************************** FIN CONTENIDO PAGINA **************************************** */
 
 /* ========================= ANIMACION PRESENTACION INICIO ========================================== */
-/* animacion de sombras del texto inicial */
-@keyframes shadows {
-  0% {
-    text-shadow: 5px 5px 2px #000000;
-  }
-
-  10% {
-    text-shadow: 7px 7px 4px #000000;
-  }
-
-  20% {
-    text-shadow: 10px 10px 6px #000000;
-  }
-
-  30% {
-    text-shadow: 14px 14px 8px #000000;
-  }
-
-  40% {
-    text-shadow: 17px 17px 10px #000000;
-  }
-
-  50% {
-    text-shadow: 19px 19px 12px #000000;
-  }
-
-  60% {
-    text-shadow: 17px 17px 10px #000000;
-  }
-
-  70% {
-    text-shadow: 14px 14px 8px #000000;
-  }
-
-  80% {
-    text-shadow: 10px 10px 6px #000000;
-  }
-
-  90% {
-    text-shadow: 7px 7px 4px #000000;
-  }
-
-  100% {
-    text-shadow: 5px 5px 2px #000000;
-  }
-}
-
-/* movimiento del texto del inico */
-@keyframes move {
-  0% {
-    transform: translate(0px, 0px);
-  }
-
-  40% {
-    transform: translate(-12px, -12px);
-  }
-
-  50% {
-    transform: translate(-12px, -12px);
-  }
-
-  60% {
-    transform: translate(-12px, -12px);
-  }
-
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
 /* animacion de h1 al cargar la pagina */
-@keyframes anim-lineUp {
+/* @keyframes anim-lineUp {
   0% {
     opacity: 0;
     transform: translateY(80%);
@@ -633,10 +225,10 @@ p {
     opacity: 1;
     transform: translateY(0%);
   }
-}
+} */
 
 /* animacion para el movimiento de el texto del inicio */
-@keyframes anim-moveLetter {
+/* @keyframes anim-moveLetter {
   0% {
     transform: skewY(5deg);
   }
@@ -680,7 +272,7 @@ p {
   100% {
     transform: scale(1.1);
   }
-}
+} */
 
 /* ========================= FIN ANIMACION PRESENTACION INICIO ========================================== */
 
@@ -784,134 +376,21 @@ p {
   /* ------------------ FIN MENU 2 -------------------- */
 
   /* ========================= SECCION 1 ============================= */
-  .presentacion{
-    height: 100vh;
-  }
-  
-  .cont-texto div{
-    display: flex;
-    height: 23%;
-    margin-left: 1rem;
-  }
-  
-  .cont-texto div h2{
-    display: flex;
-    font-size: 7em;
-  }
-  
-  .cont-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .cont-texto p{
-    font-size: 9vw;
-    line-height: 50%;
-    color: #f1f1f1;
-  }
-
-  /* animacion de sombras inicio */
-  .text_shadows {
-    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
-  }
-
-  /* se oculta el icono de la animacion */
-  #icon-refresh{
-    visibility: hidden;
-  }
   /* ======================= FIN SECCION 1 ========================== */
 
   /* ========================= SECCION 2 ============================ */
-  /* texto de fondo */
-  .hab-contenedor .fondo {
-    font-size: 6rem;
-  }
-
-  /* al tener X tamaño de pantalla se veran los items en 1 columna */
-  .cont-caja {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  /* titulo seccion */
-  .titulo h3 {
-    margin-left: 0rem;
-    font-size: 2.5rem;
-    color: #fff;
-    text-align: center;
-  }
-
-  /* titulo caja */
-  .caja h2 {
-    text-align: center;
-  }
-
-  /* margenes*/
-  .text_info {
-    margin: 0rem 0rem 0rem 0rem;
-  }
   /* ======================= FIN SECCION 2 ============================ */
 
   /* ========================= SECCION 3 ============================== */
-  .experiencia {
-    height: auto;
-  }
-
-  /* items */
-  .caja_dos {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    color: #fff;
-    margin: 0rem 0rem 0rem 0rem;
-  }
   /* ========================= FIN SECCION 3 ============================= */
 
   /* =========================== SECCION 4 =============================== */
-  .cont-pro {
-    height: auto;
-  }
   /* ========================= FIN SECCION 4 ============================= */
 }
 
 @media (min-width: 767px) and (max-width: 1023px) {
 
   /* ================== SECCION 1 ====================== */
-  .presentacion{
-    height: 100vh;
-  }
-  
-  .cont-texto div{
-    display: flex; 
-    height: 23%;
-  }
-  
-  .cont-texto div h2{
-    display: flex;
-    font-size: 7em;
-  }
-  
-  .cont-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .cont-texto p{
-    font-size: 8vw;
-    line-height: 50%;
-    color: #f1f1f1;
-  }
   /* ================= FIN SECCION 1 =================== */
   
   /* texto de fondo */
@@ -1022,25 +501,12 @@ p {
   }
 
   /* ==================== SECCION 3 ========================== */
-  .caja_dos {
-    height: auto;
-  }
   /* ================== FIN SECCION 3 ======================== */
+
   .cont-pro {
     height: auto;
   }
 }
 
-@media (min-width: 1024px) {
-  
-  /* ==================== SECCION 2 ========================== */
-  .caja{
-    text-align: center;
-  }
-  /* ================== FIN SECCION 2 ======================== */
-}
-
-
 /* ================================================================================================= */
 /* =================================== FIN MEDIA QUERYS ============================================ */
-

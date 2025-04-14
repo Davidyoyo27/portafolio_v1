@@ -1,0 +1,150 @@
+/* =============================== SECCION 1 ========================================= */
+/* contenedor principal de la seccion */
+.presentacion {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.ini-contenedor .fondo {
+  position: absolute;
+  font-size: 10em;
+  bottom: 0;
+  right: 0;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.cont-texto div {
+  display: flex;
+  height: 23%;
+}
+
+#btn_play {
+  font-size: 1rem;
+}
+
+.cont-texto div h2 {
+  display: flex;
+  font-size: 7em;
+}
+
+.cont-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* texto presentacion del inicio */
+.cont-texto p {
+  font-size: 4.5rem;
+  line-height: 30%;
+  color: #f1f1f1;
+  cursor: default;
+}
+
+/* animacion del texto(por letra) inicial al pasar el mouse por encima */
+/* .ini_text p:hover {
+  color: aqua;
+  transition: 0.5s;
+  animation: anim-moveLetter 0.8s ease-in;
+  animation-iteration-count: 1;
+} */
+
+/* contenedor del icono de iniciar la animacion */
+#icon-refresh {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* icono de actualizar */
+#icon-refresh ion-icon {
+  color: #fff;
+  font-size: 4rem;
+  position: absolute;
+  right: 7rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* =============================== FIN SECCION 1 ===================================== */
+@media (max-width: 767px) {
+
+  /* ========================= SECCION 1 ============================= */
+  .presentacion {
+    height: 100vh;
+  }
+
+  .cont-texto div {
+    display: flex;
+    height: 23%;
+    margin-left: 1rem;
+  }
+
+  .cont-texto div h2 {
+    display: flex;
+    font-size: 7em;
+  }
+
+  .cont-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cont-texto p {
+    font-size: 9vw;
+    line-height: 50%;
+    color: #f1f1f1;
+  }
+
+  #icon-refresh ion-icon {
+    font-size: 3rem;
+    right: 1rem;
+  }
+
+  .ini-contenedor .fondo {
+    position: absolute;
+    font-size: 8em;
+    bottom: 0;
+    right: 0;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  /* ======================= FIN SECCION 1 ========================== */
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+
+  /* ================== SECCION 1 ====================== */
+  .presentacion {
+    height: 100vh;
+  }
+
+  .cont-texto div {
+    display: flex;
+    height: 23%;
+  }
+
+  .cont-texto div h2 {
+    display: flex;
+    font-size: 7em;
+  }
+
+  .cont-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cont-texto p {
+    font-size: 8vw;
+    line-height: 50%;
+    color: #f1f1f1;
+  }
+
+  /* ================= FIN SECCION 1 =================== */
+}
