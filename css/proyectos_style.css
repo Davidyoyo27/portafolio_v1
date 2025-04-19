@@ -1,4 +1,3 @@
-/* =============================== SECCION 4 ========================================= */
 /* contenedor principal de la seccion */
 .proyectos {
     /* para controlar que los elementos no se salgan de su contenedor al reducirse el tamaño de la pantalla
@@ -17,12 +16,14 @@
 
 /* contenedor */
 .cont-pro {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 2rem 0rem 2rem 0rem;
+    z-index: 1;
 }
 
 /* items */
@@ -52,16 +53,21 @@
 
 /* contenedor texto fondo */
 .pro-contenedor {
+    position: absolute;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    top: 0;
 }
 
 /* texto de fondo de la seccion */
-.pro-contenedor .fondo {
-    font-size: 10vw;
-    opacity: 0.1;
-    position: absolute;
-    bottom: 0;
+.pro-contenedor span {
+    color: violet;
+    font-size: 10em;
+    position: relative;
+    font-weight: 700;
+    /* opacity: 0.1; */
     z-index: -1;
 }
 
@@ -70,12 +76,22 @@
     opacity: 0.4;
 }
 
-/* =============================== FIN SECCION 4 ========================================= */
-
 @media (max-width: 767px) {
-    /* =========================== SECCION 4 =============================== */
-  .cont-pro {
-    height: auto;
-  }
-  /* ========================= FIN SECCION 4 ============================= */
+    .cont-pro {
+        height: auto;
+    }
+}
+
+@media (max-width: 1103px) {
+    .pro-contenedor {
+        top: 24em;
+    }
+
+    .pro-contenedor span {
+        color: violet;
+        font-size: 10em;
+        position: relative;
+        font-weight: 700;
+        z-index: -1;
+    }
 }

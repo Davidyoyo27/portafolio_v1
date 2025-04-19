@@ -1,4 +1,3 @@
-/* =============================== SECCION 2 ========================================= */
 /* contenedor principal de la seccion */
 .habilidades {
     height: 100vh auto;
@@ -15,9 +14,14 @@
     color: #fff;
 }
 
+.container_text_info {
+    display: flex;
+    justify-content: center;
+}
+
 /* margenes del texto informativo bajo el titulo*/
 .text_info {
-    margin: 0rem 15rem 0rem 15rem;
+    width: 75%;
 }
 
 /* texto de presentacion y contenido de la seccion */
@@ -77,24 +81,27 @@ p {
 }
 
 /* texto de fondo de seccion */
-.hab-contenedor .fondo {
+.hab-contenedor span {
+    color: violet;
     font-size: 10em;
-    position: absolute;
-    bottom: 4.5em;
-    opacity: 0.1;
+    position: relative;
+    bottom: 6.5em;
+    font-weight: 700;
+    /* opacity: 0.1; */
     z-index: -1;
 }
 
 /* texto de fondo de la seccion */
 .hab-contenedor {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
-/* =============================== FIN SECCION 2====================================== */
-
 @media (max-width: 767px) {
-    /* ========================= SECCION 2 ============================ */
+
     /* texto de fondo */
     .hab-contenedor .fondo {
         font-size: 1rem;
@@ -113,22 +120,20 @@ p {
         text-align: center;
     }
 
-    /* titulo caja */
-    /* .caja h2 {
-        text-align: center;
-    } */
-
     /* margenes*/
     .text_info {
         margin: 0rem 0rem 0rem 0rem;
     }
-    /* ======================= FIN SECCION 2 ============================ */
 }
 
-@media (min-width: 1024px) {
-    /* ==================== SECCION 2 ========================== */
-    .caja {
-        /* text-align: center; */
+@media (max-width: 1024px) {
+    .text_info {
+        width: 90%;
     }
-    /* ================== FIN SECCION 2 ======================== */
+}
+
+@media (max-width: 1300px) {
+    .text_info {
+        width: 95%;
+    }
 }
