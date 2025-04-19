@@ -92,9 +92,9 @@
         background-color: #e7eaf6;
         position: fixed;
         bottom: 2rem;
-        z-index: 1;
         border-radius: 50%;
         background-color: #0a165c;
+        z-index: 2;
     }
 
     .wrapper a {
