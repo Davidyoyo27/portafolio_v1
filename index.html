@@ -17,11 +17,21 @@
     <!-- primera version usada de ionicos en el portafolio -->
     <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
 
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
     <!-- FIN IONICONS SCRIPTS -->
     <title>Portafolio -- David Carrasco</title>
-    <link rel="icon" href="images/laptop-code-solid-lightgreen.svg" type="image/x-icon"/>
+    <link
+      rel="icon"
+      href="images/laptop-code-solid-lightgreen.svg"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <!-- MENU LATERAL -->
@@ -92,17 +102,26 @@
         <!-- FIN ICONO ACTUALIZAR ANIMACION -->
         <div class="cont-texto">
           <div id="icon-refresh">
-            <ion-icon id="btn_play" name="refresh" onclick="playAnimation()"></ion-icon>
+            <ion-icon
+              data-aos="fade-down"
+              id="btn_play"
+              name="refresh"
+              onclick="playAnimation()"
+            ></ion-icon>
           </div>
           <h2 class="text_shadows">
-            <div class="ini_text">
+            <div data-aos="fade-down" data-aos-duration="1500" class="ini_text">
               <p>H</p>
               <p>o</p>
               <p>l</p>
               <p>a</p>
               <p>,</p>
             </div>
-            <div class="ini_text">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              class="ini_text"
+            >
               <p>S</p>
               <p>o</p>
               <p>y</p>
@@ -114,7 +133,7 @@
               <p>d</p>
               <p>,</p>
             </div>
-            <div class="ini_text">
+            <div data-aos="fade-left" data-aos-duration="1500" class="ini_text">
               <p>D</p>
               <p>e</p>
               <p>s</p>
@@ -129,7 +148,7 @@
               <p>o</p>
               <p>r</p>
             </div>
-            <div class="ini_text">
+            <div data-aos="fade-up" data-aos-duration="1500" class="ini_text">
               <p>W</p>
               <p>e</p>
               <p>b</p>
@@ -199,7 +218,8 @@
         <div class="container">
           <div class="cont-caja">
             <div data-aos="zoom-in-up">
-              <div class="caja" > <!-- id="primer-caja" -->
+              <div class="caja">
+                <!-- id="primer-caja" -->
                 <h2>Lenguajes de Programación</h2>
                 <ul>
                   <li>Javascript</li>
@@ -295,28 +315,56 @@
               </p>
               <p>Stack: DB2 - SQL Server - PostgreSQL</p>
               <ul>
-                <li>
-                  Manejo de Bases de Datos como DB2, SQL Server y PostgreSQL.
-                </li>
-                <li>
-                  Revision de Querys dentro de los entornos de Test y Producción
-                  para uno de los sistemas de la empresa.
-                </li>
-                <li>
-                  Inserción, modificación y eliminación de datos en producción.
-                  <!-- ... de datos en los distintos entornos de desarrollo. -->
-                </li>
-                <li>Modificacion de SPs y logica.</li>
-                <li>
-                  Migre código de DB2 a SQL Server, adaptando sintaxis y
-                  funcionalidades, ademas validé la integridad de los datos
-                  post-migración.
-                </li>
-                <li>
-                  Realice carga de datos de tablas mediante ETL (pentaho), y en
-                  caso que estas presentaran algun problema o error en su carga
-                  se realizo la revision correspondiente.
-                </li>
+                <p>
+                  Dentro de mis asignaciones estuve recibiendo solicitudes para
+                  un sistema de la empresa llamado EDOC, este sistema veia la
+                  FECU el cual de manera simple son Documentos, estos documentos
+                  mostraban resultados de los fondos de inversion el cual es el
+                  rubro de la empresa, es un Documento por fondo y estos se
+                  presentaban de manera trimestral. A continuación se nombrara
+                  una lista de tareas realizadas referente a este sistema:
+                </p>
+                <ul>
+                  <li>
+                    Dentro de los entornos que se manejaban en la empresa para
+                    los diferentes sistemas y aplicaciones, las Bases de Datos
+                    entre las cuales desempeñe labores fueron DB2, SQL Server y
+                    PostgreSQL.
+                  </li>
+                  <li>
+                    Realice tareas de mantención dentro de las cuales se
+                    requeria solucionar problemas en Producción, puesto que los
+                    sistemas trabajaban directamente con la Base de Datos habia
+                    que detectar donde exactamente estaba el problema y darle
+                    solución.
+                  </li>
+                  <li>
+                    Dentro de mis labores se realizo el mantenimiento de los
+                    datos de acuerdo a solicitudes del cliente ya sea para
+                    modificación, eliminación o inserción de datos para que
+                    estos se acercaran a sus parámetros o lineamientos.
+                  </li>
+                  <li>
+                    Dentro de las asignaciones o solicitudes también realice
+                    tareas de modificación de SPs (Stored
+                    Procedures/Procedimientos Almacenados) puesto que la empresa
+                    manejaba toda la logica del negocio en la Base de Datos
+                    habian ocasiones en las cuales se necesitaba realizar
+                    modificaciones a los SPs.
+                  </li>
+                  <li>
+                    Migre código de DB2 a SQL Server, adaptando sintaxis y
+                    funcionalidades, ademas validé la integridad de los datos
+                    post-migración.
+                  </li>
+                  <li>
+                    Realice carga de datos de tablas mediante ETL (pentaho),
+                    dichas cargas dependiendo de como se realizara la logica de
+                    carga podian ser diaria, semanal o mensual. Y en caso que
+                    estas presentaran algún problema o error en su carga se
+                    realizo la revision correspondiente.
+                  </li>
+                </ul>
               </ul>
             </div>
             <div class="caja_dos">
