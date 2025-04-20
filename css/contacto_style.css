@@ -47,10 +47,10 @@
 
 /* texto de fondo de la seccion */
 .cont-contenedor span {
-    color: violet;
     font-size: 10em;
     position: relative;
     font-weight: 700;
-    /* opacity: 0.1; */
+    opacity: 0.1;
+    user-select: none;
     z-index: -1;
 }

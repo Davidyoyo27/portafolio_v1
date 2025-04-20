@@ -82,12 +82,11 @@ p {
 
 /* texto de fondo de seccion */
 .hab-contenedor span {
-    color: violet;
     font-size: 10em;
     position: relative;
     bottom: 6.5em;
     font-weight: 700;
-    /* opacity: 0.1; */
+    opacity: 0.1;
     z-index: -1;
 }
 
